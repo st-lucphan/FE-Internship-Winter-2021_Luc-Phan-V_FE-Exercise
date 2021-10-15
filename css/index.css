@@ -1,0 +1,336 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+ul {
+  list-style: none;
+}
+img {
+  width: 100%;
+}
+.container {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  margin-left: -10px;
+}
+.col {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.col-3 {
+  width: 25%;
+}
+.col-4 {
+  width: calc(100% / 3);
+}
+.col-5 {
+  width: calc(5 / 12 * 100%);
+}
+.col-6 {
+  width: 50%;
+}
+.col-7 {
+  width: calc(7 / 12 * 100%);
+}
+.col-8 {
+  width: calc(100% * 8 / 12);
+}
+.btn-default {
+  border-radius: 56px;
+  background-color: #ffff;
+  padding: 16px 28px;
+}
+.btn-warning {
+  background-color: #FBB03B;
+  color: #ffff;
+}
+.text-uppercase {
+  text-transform: uppercase;
+}
+.text-center {
+  text-align: center;
+}
+.text-warning {
+  color: #FBB03B;
+}
+.header {
+  height: 48px;
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  top: 48px;
+  left: 10%;
+  z-index: 1;
+  background-color: black;
+}
+.logo {
+  width: 10%;
+}
+.logo-link {
+  width: 138px;
+  height: 36px;
+}
+.nav {
+  width: 80%;
+}
+.nav-list {
+  text-align: center;
+}
+.nav-item {
+  display: inline;
+  height: 24px;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  margin-left: 96px;
+}
+.nav-link {
+  line-height: 48px;
+  text-decoration: none;
+  color: #FBB03B;
+  font-weight: 700;
+  font-size: 18px;
+}
+.option {
+  width: 10%;
+}
+.option-item {
+  display: inline-block;
+  height: 24px;
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+.option-link {
+  height: 24px;
+}
+.section-banner {
+  position: relative;
+  top: 0px;
+}
+.section-benefit {
+  background-color:#F7F7F7;
+}
+.banner-content {
+  width: 25%;
+  position: absolute;
+  top: 25%;
+  left: 15%;
+}
+.benefit {
+  width: 75%;
+  height: 125px;
+  padding-top: 36px;
+  padding-bottom: 24px;
+  position: absolute;
+  left: 0;
+  bottom: 7%;
+  background-color: #FFFFFF;
+  border-radius: 0px 70px 0px 0px;
+}
+.benefit-list{
+  padding-left: 25%;
+}
+.benefit-horizontal {
+  display: flex;
+  flex-direction: row;
+}
+.banner-title {
+  width: 100%;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 72px;
+  line-height: 101.5%;
+  color: #FFFFFF;
+}
+.banner-action {
+  font-family: Poppins;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  height: 36px;
+  color: #FFFFFF;
+}
+.banner-action-img {
+  width: 36px;
+  height: 36px;
+}
+
+.benefit-img {
+  width: 36px;
+  height: 36px;
+}
+.collection-item {
+  position: relative;
+}
+.collection-btn {
+  position: absolute;
+  left: 40px;
+  top: 258px;
+}
+.collection-title {
+  width: 50%;
+  position: absolute;
+  left: 40px;
+  right: 69.01%;
+  top: 46.52%;
+  bottom: 43.45%;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 36px;
+  color: #FFFFFF;
+}
+.section {
+  width: 100%;
+  padding-top: 48px;
+  padding-bottom: 60px;
+}
+.section-title {
+	font-family: Poppins;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 32px;
+  line-height: 48px;
+  color: #333333;
+  margin-bottom: 40px;
+}
+.section-content {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.card {
+  position: relative;
+}
+.card-title-link {
+	font-size: 16px;
+	line-height: 24px;
+	font-weight: 300;
+	color: #333333;
+	text-decoration: none;
+	font-family: Poppins;
+}
+.card-price {
+	font-family: Poppins;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 30px;
+	color: #333333;
+}
+.card-discount-price {
+  color: #FF0000;
+}
+.card-original-price {
+  font-family: Poppins;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  color: #CECECE;
+  float: right;
+}
+.discount {
+  position: absolute;
+  top: 24px;
+  left: 20px;
+  display: inline-block;
+  width: 56px;
+  height: 30px;
+  padding-top: 6px;
+  background: #FF0000;
+  border-radius: 20px;
+  font-family: Poppins;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 18px;
+  text-align: center;
+  color: #FFFFFF;
+}
+.benefit-description {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+  color: #808080;
+}
+.benefit-title {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  color: #333333;
+}
+.section-newsletter {
+  position: relative;
+}
+.newsletter {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+}
+.newsletter-title {
+  width: 90%;
+  margin-left: 5%;
+}
+.form-input {
+  width: 50%;
+}
+footer {
+  background-color: #fbb03b;
+}
+.footer {
+  display: flex;
+  flex-direction: row;
+  color: #FFFFFF;
+  padding-top: 46px;
+  padding-bottom: 40px;
+}
+.footer-left {
+  display: flex;
+  flex-direction: column;
+}
+.shop-info {
+  font-family: Poppins;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  margin-top: 32px;
+}
+.social-list {
+  margin-top: 56px;
+}
+.social-item {
+  margin-right: 32px;
+}
+.footer-right {
+  display: flex;
+  flex-direction: row;
+}
+.list-group {
+  margin-top: 20px;
+}
+.list-group-item {
+  padding-bottom: 16px;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+}
+.list-title {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+}
+.copyright {
+  text-align: center;
+  color: #FFFFFF;
+}
