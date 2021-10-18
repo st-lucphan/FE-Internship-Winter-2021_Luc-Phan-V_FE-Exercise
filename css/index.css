@@ -42,12 +42,13 @@ img {
   width: calc(100% * 8 / 12);
 }
 .btn-default {
+  border: 1px solid #333333;
   border-radius: 56px;
   background-color: #ffff;
   padding: 16px 28px;
 }
 .btn-warning {
-  background-color: #FBB03B;
+  background-color: #fbb03b;
   color: #ffff;
 }
 .text-uppercase {
@@ -57,7 +58,7 @@ img {
   text-align: center;
 }
 .text-warning {
-  color: #FBB03B;
+  color: #fbb03b;
 }
 .header {
   height: 48px;
@@ -67,17 +68,17 @@ img {
   top: 48px;
   left: 10%;
   z-index: 1;
-  background-color: black;
 }
 .logo {
   width: 10%;
+  padding-top: 6px;
 }
 .logo-link {
   width: 138px;
   height: 36px;
 }
 .nav {
-  width: 80%;
+  width: 75%;
 }
 .nav-list {
   text-align: center;
@@ -92,28 +93,54 @@ img {
 .nav-link {
   line-height: 48px;
   text-decoration: none;
-  color: #FBB03B;
+  color: #fbb03b;
   font-weight: 700;
   font-size: 18px;
 }
 .option {
-  width: 10%;
+  width: 15%;
 }
 .option-item {
   display: inline-block;
   height: 24px;
   margin-top: 12px;
   margin-bottom: 12px;
+  padding-left: 12px;
+  padding-right: 12px;
 }
 .option-link {
   height: 24px;
 }
-.section-banner {
+.section {
+  width: 100%;
+  padding-top: 48px;
+  padding-bottom: 60px;
+}
+.section.section-banner {
   position: relative;
   top: 0px;
+  padding-top: 0 !important;
+}
+.section.section-newsletter {
+  padding-bottom: 0px;
+}
+.section.section-product {
+  position: relative;
+}
+.section.section-newsletter {
+  position: relative;
+}
+.section-title {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 32px;
+  line-height: 48px;
+  color: #333333;
+  margin-bottom: 40px;
 }
 .section-benefit {
-  background-color:#F7F7F7;
+  background-color: #f7f7f7;
 }
 .banner-content {
   width: 25%;
@@ -121,23 +148,36 @@ img {
   top: 25%;
   left: 15%;
 }
+.section-action {
+  position: absolute;
+  top: 10%;
+  right: 10%;
+}
 .benefit {
-  width: 75%;
-  height: 125px;
+  width: 80%;
   padding-top: 36px;
   padding-bottom: 24px;
   position: absolute;
   left: 0;
   bottom: 7%;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   border-radius: 0px 70px 0px 0px;
 }
-.benefit-list{
-  padding-left: 25%;
+.banner-benefit {
+  padding-left: 20%;
 }
 .benefit-horizontal {
   display: flex;
   flex-direction: row;
+}
+.benefit-item {
+  margin-right: 48px;
+}
+.benefit-img {
+  width: 36px;
+  height: 36px;
+  margin-right: 20px;
+  background-color: #fff3df;
 }
 .banner-title {
   width: 100%;
@@ -146,7 +186,7 @@ img {
   font-weight: bold;
   font-size: 72px;
   line-height: 101.5%;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 .banner-action {
   font-family: Poppins;
@@ -154,16 +194,13 @@ img {
   font-size: 24px;
   line-height: 36px;
   height: 36px;
-  color: #FFFFFF;
+  color: #ffffff;
+  display: flex;
 }
 .banner-action-img {
   width: 36px;
   height: 36px;
-}
-
-.benefit-img {
-  width: 36px;
-  height: 36px;
+  margin-right: 32px;
 }
 .collection-item {
   position: relative;
@@ -185,54 +222,35 @@ img {
   font-weight: 400;
   font-size: 24px;
   line-height: 36px;
-  color: #FFFFFF;
-}
-.section {
-  width: 100%;
-  padding-top: 48px;
-  padding-bottom: 60px;
-}
-.section-title {
-	font-family: Poppins;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 32px;
-  line-height: 48px;
-  color: #333333;
-  margin-bottom: 40px;
-}
-.section-content {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
+  color: #ffffff;
 }
 .card {
   position: relative;
 }
-.card-title-link {
-	font-size: 16px;
-	line-height: 24px;
-	font-weight: 300;
-	color: #333333;
-	text-decoration: none;
-	font-family: Poppins;
+.card .card-title-link {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 300;
+  color: #333333;
+  text-decoration: none;
+  font-family: Poppins;
 }
-.card-price {
-	font-family: Poppins;
-	font-weight: 400;
-	font-size: 20px;
-	line-height: 30px;
-	color: #333333;
-}
-.card-discount-price {
-  color: #FF0000;
-}
-.card-original-price {
+.card .card-price {
   font-family: Poppins;
   font-weight: 400;
   font-size: 20px;
   line-height: 30px;
-  color: #CECECE;
+  color: #333333;
+}
+.card .card-discount-price {
+  color: #ff0000;
+}
+.card .card-original-price {
+  font-family: Poppins;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  color: #cecece;
   float: right;
 }
 .discount {
@@ -243,14 +261,14 @@ img {
   width: 56px;
   height: 30px;
   padding-top: 6px;
-  background: #FF0000;
+  background: #ff0000;
   border-radius: 20px;
   font-family: Poppins;
   font-weight: 700;
   font-size: 12px;
   line-height: 18px;
   text-align: center;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 .benefit-description {
   font-family: Poppins;
@@ -268,20 +286,24 @@ img {
   line-height: 24px;
   color: #333333;
 }
-.section-newsletter {
-  position: relative;
-}
 .newsletter {
   position: absolute;
-  top: 20%;
+  top: 50%;
   left: 10%;
 }
-.newsletter-title {
+.newsletter .newsletter-title {
   width: 90%;
   margin-left: 5%;
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 36px;
 }
 .form-input {
   width: 50%;
+  border: 1px solid #333333;
+  border-radius: 61px;
+  padding: 16px 28px;
 }
 footer {
   background-color: #fbb03b;
@@ -289,13 +311,30 @@ footer {
 .footer {
   display: flex;
   flex-direction: row;
-  color: #FFFFFF;
+  color: #ffffff;
   padding-top: 46px;
   padding-bottom: 40px;
 }
-.footer-left {
+.footer .footer-left {
   display: flex;
   flex-direction: column;
+}
+.footer .footer-left .social-list {
+  margin-top: 56px;
+}
+.social-list .social-item {
+  margin-right: 32px;
+}
+.footer .footer-right {
+  display: flex;
+  flex-direction: row;
+}
+.footer .footer-right .list-title {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
 }
 .shop-info {
   font-family: Poppins;
@@ -304,33 +343,20 @@ footer {
   line-height: 21px;
   margin-top: 32px;
 }
-.social-list {
-  margin-top: 56px;
-}
-.social-item {
-  margin-right: 32px;
-}
-.footer-right {
-  display: flex;
-  flex-direction: row;
-}
+
 .list-group {
   margin-top: 20px;
 }
-.list-group-item {
+.list-group .list-group-item {
   padding-bottom: 16px;
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
 }
-.list-title {
-  font-family: Poppins;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 24px;
-}
 .copyright {
+  padding-top: 24px;
+  padding-bottom: 24px;
   text-align: center;
-  color: #FFFFFF;
+  color: #ffffff;
+  border-top: 1px solid #ffffff;
 }
