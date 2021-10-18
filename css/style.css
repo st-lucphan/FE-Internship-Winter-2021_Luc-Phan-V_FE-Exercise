@@ -9,19 +9,6 @@ ul {
 img {
   width: 100%; }
 
-.btn-warning {
-  background-color: #fbb03b;
-  color: #ffff; }
-
-.text-uppercase {
-  text-transform: uppercase; }
-
-.text-center {
-  text-align: center; }
-
-.text-warning {
-  color: #fbb03b; }
-
 .container {
   width: 80%;
   margin-left: auto;
@@ -54,6 +41,131 @@ img {
 .col-8 {
   width: calc(100% * 8 / 12); }
 
+.header {
+  height: 48px;
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  top: 48px;
+  left: 10%;
+  z-index: 1; }
+  .header .logo {
+    width: 10%;
+    padding-top: 6px; }
+    .header .logo .logo-link {
+      width: 138px;
+      height: 36px; }
+  .header .nav {
+    width: 75%; }
+    .header .nav .nav-list {
+      text-align: center; }
+      .header .nav .nav-list .nav-item {
+        display: inline;
+        height: 24px;
+        margin-top: 12px;
+        margin-bottom: 12px;
+        margin-left: 96px; }
+        .header .nav .nav-list .nav-item .nav-link {
+          line-height: 48px;
+          text-decoration: none;
+          color: #fbb03b;
+          font-weight: 700;
+          font-size: 18px; }
+  .header .option {
+    width: 15%; }
+    .header .option .option-item {
+      display: inline-block;
+      height: 24px;
+      margin-top: 12px;
+      margin-bottom: 12px;
+      padding-left: 12px;
+      padding-right: 12px; }
+      .header .option .option-item .option-link {
+        height: 24px; }
+
+.section {
+  width: 100%;
+  padding-top: 48px;
+  padding-bottom: 60px; }
+  .section.section-banner {
+    position: relative;
+    top: 0px;
+    padding-top: 0 !important; }
+  .section.section-benefit {
+    background-color: #f7f7f7; }
+  .section.section-newsletter {
+    padding-bottom: 0px;
+    position: relative; }
+  .section.section-product {
+    position: relative; }
+  .section .section-title {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 32px;
+    line-height: 48px;
+    color: #333333;
+    margin-bottom: 40px; }
+  .section .section-action {
+    position: absolute;
+    top: 10%;
+    right: 10%; }
+
+footer {
+  background-color: #fbb03b; }
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  color: #ffffff;
+  padding-top: 46px;
+  padding-bottom: 40px; }
+  .footer .footer-left {
+    display: flex;
+    flex-direction: column; }
+    .footer .footer-left .logo-link {
+      width: 138px;
+      height: 36px; }
+    .footer .footer-left .shop-info {
+      font-family: Poppins;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 21px;
+      margin-top: 32px; }
+    .footer .footer-left .social-list {
+      margin-top: 56px; }
+      .footer .footer-left .social-list .social-item {
+        margin-right: 32px; }
+  .footer .footer-right {
+    display: flex;
+    flex-direction: row; }
+    .footer .footer-right .list-title {
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 24px; }
+    .footer .footer-right .list-title {
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 24px; }
+    .footer .footer-right .list-group {
+      margin-top: 20px; }
+      .footer .footer-right .list-group .list-group-item {
+        padding-bottom: 16px;
+        font-size: 14px;
+        line-height: 21px;
+        font-weight: 400; }
+
+.copyright {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  text-align: center;
+  color: #ffffff;
+  border-top: 1px solid #ffffff; }
+
 .card {
   position: relative; }
   .card .card-title-link {
@@ -63,14 +175,14 @@ img {
     color: #333333;
     text-decoration: none;
     font-family: Poppins; }
-  .card .card .card-price {
+  .card .card-price {
     font-family: Poppins;
     font-weight: 400;
     font-size: 20px;
     line-height: 30px;
     color: #333333; }
-  .card .card-discount-price {
-    color: #ff0000; }
+    .card .card-price.card-discount-price {
+      color: #ff0000; }
   .card .card-original-price {
     font-family: Poppins;
     font-weight: 400;
@@ -78,5 +190,114 @@ img {
     line-height: 30px;
     color: #cecece;
     float: right; }
+
+.btn-default {
+  border: 1px solid #333333;
+  border-radius: 56px;
+  background-color: #ffff;
+  padding: 16px 28px; }
+
+.form-input {
+  width: 50%;
+  border: 1px solid #333333;
+  border-radius: 61px;
+  padding: 16px 28px; }
+
+.discount {
+  position: absolute;
+  top: 24px;
+  left: 20px;
+  display: inline-block;
+  width: 56px;
+  height: 30px;
+  padding-top: 6px;
+  background: #ff0000;
+  border-radius: 20px;
+  font-family: Poppins;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 18px;
+  text-align: center;
+  color: #ffffff; }
+
+.collection-item {
+  position: relative; }
+  .collection-item .collection-btn {
+    position: absolute;
+    left: 40px;
+    top: 258px; }
+  .collection-item .collection-title {
+    width: 50%;
+    position: absolute;
+    left: 40px;
+    right: 69.01%;
+    top: 46.52%;
+    bottom: 43.45%;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    color: #ffffff; }
+
+.benefit {
+  width: 80%;
+  padding-top: 36px;
+  padding-bottom: 24px;
+  position: absolute;
+  left: 0;
+  bottom: 7%;
+  background-color: #ffffff;
+  border-radius: 0px 70px 0px 0px; }
+
+.benefit-item {
+  margin-right: 48px; }
+  .benefit-item.benefit-horizontal {
+    display: flex;
+    flex-direction: row; }
+  .benefit-item .benefit-img {
+    width: 36px;
+    height: 36px;
+    margin-right: 20px;
+    background-color: #fff3df; }
+  .benefit-item .benefit-content .benefit-description {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 21px;
+    color: #808080; }
+  .benefit-item .benefit-content .benefit-title {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+    color: #333333; }
+
+.newsletter {
+  position: absolute;
+  top: 50%;
+  left: 10%; }
+  .newsletter .newsletter-title {
+    width: 90%;
+    margin-left: 5%;
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 36px; }
+
+.btn-warning {
+  background-color: #fbb03b;
+  color: #ffff; }
+
+.text-uppercase {
+  text-transform: uppercase; }
+
+.text-center {
+  text-align: center; }
+
+.text-warning {
+  color: #fbb03b; }
 
 /*# sourceMappingURL=style.css.map */

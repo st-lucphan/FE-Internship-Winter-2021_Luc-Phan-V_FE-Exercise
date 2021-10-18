@@ -1,0 +1,65 @@
+footer {
+	background-color: #fbb03b;
+}
+.footer {
+	display: flex;
+	flex-direction: row;
+	color: #ffffff;
+	padding-top: 46px;
+	padding-bottom: 40px;
+	.footer-left {
+		display: flex;
+		flex-direction: column;
+		.logo-link {
+			width: 138px;
+			height: 36px;
+		}
+		.shop-info {
+			font-family: Poppins;
+			font-weight: 400;
+			font-size: 14px;
+			line-height: 21px;
+			margin-top: 32px;
+		}
+		.social-list {
+			margin-top: 56px;
+			.social-item {
+				margin-right: 32px;
+			}
+		}
+	}
+	.footer-right {
+		display: flex;
+		flex-direction: row;
+		.list-title {
+			font-family: Poppins;
+			font-style: normal;
+			font-weight: 700;
+			font-size: 16px;
+			line-height: 24px;
+		}
+		.list-title {
+			font-family: Poppins;
+			font-style: normal;
+			font-weight: 700;
+			font-size: 16px;
+			line-height: 24px;
+		}
+		.list-group {
+			margin-top: 20px;
+			.list-group-item {
+				padding-bottom: 16px;
+				font-size: 14px;
+				line-height: 21px;
+				font-weight: 400;
+			}
+		}
+	}
+}
+.copyright {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  text-align: center;
+  color: #ffffff;
+  border-top: 1px solid #ffffff;
+}
