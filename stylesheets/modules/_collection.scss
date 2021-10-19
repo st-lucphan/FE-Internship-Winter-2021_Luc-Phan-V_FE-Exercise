@@ -1,0 +1,28 @@
+.collection-list {
+  .collection-item {
+    position: relative;
+    .collection-discount {
+      position: absolute;
+      top: 30%;
+      left: 10%;
+    }
+    .collection-btn {
+      position: absolute;
+      left: 40px;
+      top: 258px;
+    }
+    .collection-title {
+      width: 55%;
+      position: absolute;
+      left: 40px;
+      right: 69.01%;
+      top: 46.52%;
+      bottom: 43.45%;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 36px;
+      color: #ffffff;
+    }
+  }
+}

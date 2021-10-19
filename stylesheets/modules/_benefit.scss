@@ -1,0 +1,30 @@
+.benefit-item {
+  margin-right: 48px;
+}
+.benefit-list .benefit-item {
+  &.benefit-horizontal {
+    display: flex;
+    flex-direction: row;
+  }
+  .benefit-img {
+    width: 36px;
+    height: 36px;
+    padding: 10px 10px;
+    margin-right: 20px;
+    background-color: #fff3df;
+  }
+  .benefit-description {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 21px;
+    color: #808080;
+  }
+  .benefit-title {
+    font-style: normal;
+    font-weight: bold;
+    font-size: map-get($font-size, normal);
+    line-height: 24px;
+    color: #333333;
+  }
+}

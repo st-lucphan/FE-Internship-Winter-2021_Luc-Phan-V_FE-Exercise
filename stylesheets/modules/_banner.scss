@@ -1,0 +1,40 @@
+.banner-content {
+  width: 30%;
+  position: absolute;
+  top: 25%;
+  left: 15%;
+  .banner-title {
+    width: 100%;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 72px;
+    line-height: 101.5%;
+    color: #ffffff;
+  }
+  .banner-action {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    height: 36px;
+    color: #ffffff;
+    display: flex;
+    .banner-action-img {
+      width: 36px;
+      height: 36px;
+      margin-right: 32px;
+    }
+  }
+}
+.benefit {
+  width: 80%;
+  padding-top: 36px;
+  padding-bottom: 24px;
+  position: absolute;
+  left: 0;
+  bottom: 7%;
+  background-color: #ffffff;
+  border-radius: 0 70px 0 0;
+}
+.banner-benefit {
+  padding-left: 15%;
+}

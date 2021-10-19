@@ -1,6 +1,18 @@
-.btn-default {
-  border: 1px solid #333333;
+.btn {
   border-radius: 56px;
-  background-color: #ffff;
   padding: 16px 28px;
+}
+.btn-default {
+  color: #333333;
+  background-color: #ffff;
+  border: 0;
+}
+.btn-transparent {
+  border: 1px solid #c4c4c4;
+  background-color: transparent;
+}
+.btn-warning {
+  background-color: $color-primary;
+  color: #ffff;
+  border: 0;
 }

@@ -1,5 +1,8 @@
 .container {
-  width: 80%;
+  width: 1172px;
+  max-width: 1172px;
+  padding-left: 10px;
+  padding-right: 10px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -7,10 +10,17 @@
   display: flex;
   flex-direction: row;
   margin-left: -10px;
+  margin-right: -10px;
 }
 .col {
   padding-left: 10px;
   padding-right: 10px;
+}
+.col-1 {
+  width: calc(100% / 12);
+}
+.col-2 {
+  width: calc(100% / 6);
 }
 .col-3 {
   width: 25%;
@@ -29,4 +39,16 @@
 }
 .col-8 {
   width: calc(100% * 8 / 12);
+}
+.col-9 {
+  width: 75%;
+}
+.col-10 {
+  width: calc(100% * 10 / 12);
+}
+.col-11 {
+  width: calc(100% * 11 / 12);
+}
+.col-12 {
+  width: 100%;
 }
