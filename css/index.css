@@ -3,6 +3,9 @@
   margin: 0;
   box-sizing: border-box;
 }
+body {
+  font-family: Poppins;
+}
 ul {
   list-style: none;
 }
@@ -10,7 +13,10 @@ img {
   width: 100%;
 }
 .container {
-  width: 80%;
+  width: 1172px;
+  max-width: 1172px;
+  padding-left: 10px;
+  padding-right: 10px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -18,10 +24,17 @@ img {
   display: flex;
   flex-direction: row;
   margin-left: -10px;
+  margin-right: -10px;
 }
 .col {
   padding-left: 10px;
   padding-right: 10px;
+}
+.col-1 {
+  width: calc(100% / 12);
+}
+.col-2 {
+  width: calc(100% / 6);
 }
 .col-3 {
   width: 25%;
@@ -41,15 +54,35 @@ img {
 .col-8 {
   width: calc(100% * 8 / 12);
 }
-.btn-default {
-  border: 1px solid #333333;
+.col-9 {
+  width: 75%;
+}
+.col-10 {
+  width: calc(100% * 10 / 12);
+}
+.col-11 {
+  width: calc(100% * 11 / 12);
+}
+.col-12 {
+  width: 100%;
+}
+.btn {
   border-radius: 56px;
-  background-color: #ffff;
   padding: 16px 28px;
+}
+.btn-default {
+  color: #333333;
+  background-color: #ffff;
+  border: 0;
+}
+.btn-transparent {
+  border: 1px solid #c4c4c4;
+  background-color: transparent;
 }
 .btn-warning {
   background-color: #fbb03b;
   color: #ffff;
+  border: 0;
 }
 .text-uppercase {
   text-transform: uppercase;
@@ -64,41 +97,36 @@ img {
   height: 48px;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   position: absolute;
   top: 48px;
   left: 10%;
   z-index: 1;
 }
 .logo {
-  width: 10%;
   padding-top: 6px;
 }
 .logo-link {
   width: 138px;
   height: 36px;
 }
-.nav {
-  width: 75%;
-}
 .nav-list {
   text-align: center;
 }
-.nav-item {
+.nav-list .nav-item {
   display: inline;
   height: 24px;
   margin-top: 12px;
   margin-bottom: 12px;
-  margin-left: 96px;
+  margin-left: 48px;
+  margin-right: 48px;
 }
-.nav-link {
+.nav-list .nav-item .nav-link {
   line-height: 48px;
   text-decoration: none;
   color: #fbb03b;
   font-weight: 700;
   font-size: 18px;
-}
-.option {
-  width: 15%;
 }
 .option-item {
   display: inline-block;
@@ -108,7 +136,7 @@ img {
   padding-left: 12px;
   padding-right: 12px;
 }
-.option-link {
+.option-item .option-link {
   height: 24px;
 }
 .section {
@@ -116,22 +144,7 @@ img {
   padding-top: 48px;
   padding-bottom: 60px;
 }
-.section.section-banner {
-  position: relative;
-  top: 0px;
-  padding-top: 0 !important;
-}
-.section.section-newsletter {
-  padding-bottom: 0px;
-}
-.section.section-product {
-  position: relative;
-}
-.section.section-newsletter {
-  position: relative;
-}
-.section-title {
-  font-family: Poppins;
+.section .section-title {
   font-style: normal;
   font-weight: 300;
   font-size: 32px;
@@ -139,19 +152,52 @@ img {
   color: #333333;
   margin-bottom: 40px;
 }
-.section-benefit {
+.section .section-action {
+  position: absolute;
+  top: 10%;
+  right: 10%;
+}
+.section.section-banner {
+  position: relative;
+  top: 0;
+  padding-top: 0;
+}
+.section.section-product {
+  position: relative;
+}
+.section.section-newsletter {
+  position: relative;
+  padding-bottom: 0;
+}
+.section.section-benefit {
   background-color: #f7f7f7;
 }
 .banner-content {
-  width: 25%;
+  width: 30%;
   position: absolute;
   top: 25%;
   left: 15%;
 }
-.section-action {
-  position: absolute;
-  top: 10%;
-  right: 10%;
+.banner-content .banner-title {
+  width: 100%;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 72px;
+  line-height: 101.5%;
+  color: #ffffff;
+}
+.banner-content .banner-action {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  height: 36px;
+  color: #ffffff;
+  display: flex;
+}
+.banner-content .banner-action .banner-action-img {
+  width: 36px;
+  height: 36px;
+  margin-right: 32px;
 }
 .benefit {
   width: 80%;
@@ -161,63 +207,59 @@ img {
   left: 0;
   bottom: 7%;
   background-color: #ffffff;
-  border-radius: 0px 70px 0px 0px;
+  border-radius: 0 70px 0 0;
 }
 .banner-benefit {
-  padding-left: 20%;
-}
-.benefit-horizontal {
-  display: flex;
-  flex-direction: row;
+  padding-left: 15%;
 }
 .benefit-item {
   margin-right: 48px;
 }
-.benefit-img {
+.benefit-list .benefit-item.benefit-horizontal {
+  display: flex;
+  flex-direction: row;
+}
+.benefit-list .benefit-item .benefit-img {
   width: 36px;
   height: 36px;
+  padding: 10px 10px;
   margin-right: 20px;
   background-color: #fff3df;
 }
-.banner-title {
-  width: 100%;
-  font-family: Poppins;
+.benefit-list .benefit-item .benefit-description {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+  color: #808080;
+}
+.benefit-list .benefit-item .benefit-title {
   font-style: normal;
   font-weight: bold;
-  font-size: 72px;
-  line-height: 101.5%;
-  color: #ffffff;
+  font-size: 16px;
+  line-height: 24px;
+  color: #333333;
 }
-.banner-action {
-  font-family: Poppins;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 36px;
-  height: 36px;
-  color: #ffffff;
-  display: flex;
-}
-.banner-action-img {
-  width: 36px;
-  height: 36px;
-  margin-right: 32px;
-}
-.collection-item {
+.collection-list .collection-item {
   position: relative;
 }
-.collection-btn {
+.collection-list .collection-item .collection-discount {
+  position: absolute;
+  top: 30%;
+  left: 10%;
+}
+.collection-list .collection-item .collection-btn {
   position: absolute;
   left: 40px;
   top: 258px;
 }
-.collection-title {
-  width: 50%;
+.collection-list .collection-item .collection-title {
+  width: 55%;
   position: absolute;
   left: 40px;
   right: 69.01%;
   top: 46.52%;
   bottom: 43.45%;
-  font-family: Poppins;
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
@@ -233,10 +275,8 @@ img {
   font-weight: 300;
   color: #333333;
   text-decoration: none;
-  font-family: Poppins;
 }
 .card .card-price {
-  font-family: Poppins;
   font-weight: 400;
   font-size: 20px;
   line-height: 30px;
@@ -246,45 +286,29 @@ img {
   color: #ff0000;
 }
 .card .card-original-price {
-  font-family: Poppins;
   font-weight: 400;
   font-size: 20px;
   line-height: 30px;
   color: #cecece;
   float: right;
 }
-.discount {
+.card .card-discount {
   position: absolute;
   top: 24px;
   left: 20px;
+}
+.badge {
   display: inline-block;
   width: 56px;
   height: 30px;
   padding-top: 6px;
   background: #ff0000;
   border-radius: 20px;
-  font-family: Poppins;
   font-weight: 700;
   font-size: 12px;
   line-height: 18px;
   text-align: center;
   color: #ffffff;
-}
-.benefit-description {
-  font-family: Poppins;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 21px;
-  color: #808080;
-}
-.benefit-title {
-  font-family: Poppins;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 24px;
-  color: #333333;
 }
 .newsletter {
   position: absolute;
@@ -299,51 +323,51 @@ img {
   font-weight: 400;
   line-height: 36px;
 }
-.form-input {
-  width: 50%;
-  border: 1px solid #333333;
+.newsletter .form-input {
+  width: 65%;
+  border: 0;
   border-radius: 61px;
   padding: 16px 28px;
+}
+.newsletter .subscribe {
+  margin-left: 40px;
 }
 footer {
   background-color: #fbb03b;
 }
-.footer {
+.footer-top {
   display: flex;
   flex-direction: row;
   color: #ffffff;
   padding-top: 46px;
   padding-bottom: 40px;
 }
-.footer .footer-left {
+.footer-top .footer-left {
   display: flex;
   flex-direction: column;
 }
-.footer .footer-left .social-list {
-  margin-top: 56px;
-}
-.social-list .social-item {
-  margin-right: 32px;
-}
-.footer .footer-right {
-  display: flex;
-  flex-direction: row;
-}
-.footer .footer-right .list-title {
-  font-family: Poppins;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 24px;
-}
-.shop-info {
-  font-family: Poppins;
+.footer-top .footer-left .shop-info {
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
   margin-top: 32px;
 }
-
+.footer-top .footer-left .social-list {
+  margin-top: 56px;
+}
+.social-list .social-item {
+  margin-right: 32px;
+}
+.footer-top .footer-right {
+  display: flex;
+  flex-direction: row;
+}
+.footer-top .footer-right .list-title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+}
 .list-group {
   margin-top: 20px;
 }
