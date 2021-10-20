@@ -20,7 +20,7 @@
       bottom: 43.45%;
       font-style: normal;
       font-weight: 400;
-      font-size: 24px;
+      font-size: map-get($font-size, xxl);
       line-height: 36px;
       color: #ffffff;
     }

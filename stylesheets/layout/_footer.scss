@@ -15,7 +15,7 @@ footer {
       }
       .shop-info {
         font-weight: 400;
-        font-size: 14px;
+        font-size: map-get($font-size, sm);
         line-height: 21px;
         margin-top: 32px;
       }

@@ -9,7 +9,7 @@
   }
   .card-price {
     font-weight: 400;
-    font-size: 20px;
+    font-size: map-get($font-size, xl);
     line-height: 30px;
     color: #333333;
   }
@@ -18,7 +18,7 @@
   }
   .card-original-price {
     font-weight: 400;
-    font-size: 20px;
+    font-size: map-get($font-size, xl);
     line-height: 30px;
     color: #cecece;
     float: right;

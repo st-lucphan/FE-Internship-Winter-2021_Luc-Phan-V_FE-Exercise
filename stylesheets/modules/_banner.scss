@@ -13,7 +13,7 @@
   }
   .banner-action {
     font-weight: 700;
-    font-size: 24px;
+    font-size: map-get($font-size, xxl);
     line-height: 36px;
     height: 36px;
     color: #ffffff;

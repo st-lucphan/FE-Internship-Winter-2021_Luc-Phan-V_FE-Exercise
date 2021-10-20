@@ -28,7 +28,7 @@
         text-decoration: none;
         color: $color-primary;
         font-weight: 700;
-        font-size: 18px;
+        font-size: map-get($font-size, lg);
       }
     }
   }

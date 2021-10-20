@@ -6,7 +6,7 @@
     width: 90%;
     margin-left: 5%;
     color: #ffffff;
-    font-size: 24px;
+    font-size: map-get($font-size, xxl);
     font-weight: 400;
     line-height: 36px;
   }

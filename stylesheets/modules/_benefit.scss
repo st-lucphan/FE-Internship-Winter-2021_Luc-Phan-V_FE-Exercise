@@ -16,7 +16,7 @@
   .benefit-description {
     font-style: normal;
     font-weight: normal;
-    font-size: 14px;
+    font-size: map-get($font-size, sm);
     line-height: 21px;
     color: #808080;
   }
