@@ -4,11 +4,13 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700&display=swap">
+  <link rel="stylesheet" href="css/index.css">
   <title>E-Shop</title>
 </head>
 <body>
   <header>
-    <div class="container">
+    <div class="container header-content">
       <div class="logo">
         <a class="logo-link" href="#">
           <img src="images/Logo.png" alt="E-shop">
@@ -46,14 +48,14 @@
     <!--section banner-->
     <section class="section section-banner">
       <div class="banner">
-        <img src="images/banner.png" alt="banner" class="banner-image">
+        <img src="images/banner.png" alt="banner" class="banner-img">
         <div class="banner-content">
-          <h1 class="banner-title">Sale of the <span>summer</span> collection</h1>
-          <a href="#" class="text-uppercase"><img src="images/go.png" alt="go">Shop now</a>
+          <h1 class="banner-title">Sale of the <span class="text-warning">summer</span> collection</h1>
+          <a href="#" class="banner-action text-uppercase"><img src="images/go.png" alt="go"  class="banner-action-img">Shop now</a>
         </div>
       </div>
       <div class="benefit">
-        <ul class="row benefit-list">
+        <ul class="row benefit-list banner-benefit">
           <li class="col col-4 benefit-item benefit-horizontal">
             <img src="images/Path189.png" alt="icon-free-ship" class="benefit-img">
             <div class="benefit-content">
@@ -70,7 +72,7 @@
           </li>
           <li class="col col-4 benefit-item benefit-horizontal">
             <img src="images/Path91.png" alt="Originality guaranteed" class="benefit-img">
-            <div class="benefit-content benefit-horizontal">
+            <div class="benefit-content">
               <h5 class="benefit-title">Originality Guaranteed</h5>
               <p class="benefit-description">30 days warranty for each product from our store</p>
             </div>
@@ -84,18 +86,18 @@
           <li class="col col-6 collection-item">
             <img src="images/Fashion-home-image5.png" alt="New arrivalsare now in!" class="collection-img">
             <h3 class="collection-title">New arrivalsare now in!</h3>
-            <button class="btn-default text-uppercase">Show collection</button>
+            <button class="collection-btn btn btn-default text-uppercase">Show collection</button>
           </li>
           <li class="col col-3 collection-item">
             <img src="images/Fashion-home-image6.png" alt="Basic t-shirts $29,99" class="collection-img">
             <h3 class="collection-title">Basic t-shirts $29,99</h3>
-            <button class="btn-default text-uppercase">More Details</button>
+            <button class="collection-btn btn btn-default text-uppercase">More Details</button>
           </li>
-          <li class="col col-3 colection-item">
+          <li class="col col-3 collection-item">
             <img src="images/Fashion-home-image7.png" alt="Sale this summer" class="collection-img">
-            <span class="discount">-50%</span>
+            <span class="badge collection-discount">-50%</span>
             <h3 class="collection-title">Sale this summer</h3>
-            <button class="btn-default text-uppercase">View all</button>
+            <button class="collection-btn btn btn-default text-uppercase">View all</button>
           </li>
         </ul>
       </div>
@@ -104,12 +106,12 @@
     <section class="section section-product">
       <div class="container">
         <h3 class="section-title">Selected just for you</h3>
-        <button class="section-action text-uppercase">Show more</button>
+        <button class="section-action btn btn-transparent text-uppercase">Show more</button>
         <ul class="row card-list">
           <li class="col col-3">
             <div class="card">
               <a href="#"><img src="images/image.png" alt="product" class="card-img"></a>
-              <span class="discount">-50%</span>
+              <span class="badge card-discount">-50%</span>
               <div class="card-content">
                 <h4 class="card-title"><a href="#" class="card-title-link">T-Shirt Summer Vibes</a></h4>
                 <span class="card-price card-discount-price">$89.99</span>
@@ -148,9 +150,9 @@
       </div>
     </section>
     <!--section "Why should you choose us?"-->
-    <section class="section section-benifit">
+    <section class="section section-benefit">
       <div class="container">
-        <h3 class="section-title">Why should you choose us?</h3>
+        <h3 class="section-title text-center">Why should you choose us?</h3>
         <ul class="row benefit-list">
           <li class="col col-3 benefit-item benefit-vertical">
             <img src="images/Group181-1.png" alt="free-ship" class="benefit-img">
@@ -174,7 +176,7 @@
             </div>
           </li>
           <li class="col col-3 benefit-item benefit-vertical">
-            <img src="images/image-3.png" alt="Finest Quality" class="benefit-img">
+            <img src="images/Group181-3.png" alt="Finest Quality" class="benefit-img">
             <div class="benefit-content">
               <h5 class="benefit-title">Finest Quality</h5>
               <p class="benefit-description">Designed to last, each of our products hasbeen crafted with the finest materials.</p>
@@ -186,12 +188,12 @@
     <!--section "Products in today"-->
     <section class="section section-product">
       <div class="container">
-        <h3 class="section-title txt-center">Products in today</h3>
+        <h3 class="section-title text-center">Products in today</h3>
         <ul class="row card-list">
           <li class="col col-3">
             <div class="card">
               <a href="#"><img src="images/image.png" alt="product" class="card-img"></a>
-              <span class="discount">-50%</span>
+              <span class="badge card-discount">-50%</span>
               <div class="card-content">
                 <h4 class="card-title"><a href="#" class="card-title-link">T-Shirt Summer Vibes</a></h4>
                 <span class="card-price card-discount-price">$89.99</span>
@@ -232,15 +234,15 @@
     <!--section "Newsletter"-->
     <section class="section section-newsletter">
       <img src="images/Fashion-home-image8.png" alt="banner">
-      <div class="container">
+      <div class="container newsletter">
         <div class="row">
-          <div class="col col-8">
+          <div class="col col-6">
             <p class="newsletter-title">Subscribe to our newsletter andreceive exclusive offers every week</p>
           </div>
-          <div class="col col-4">
+          <div class="col col-6">
             <form class="form">
-              <input type="text" name="email" class="form-input">
-              <button type="submit" class="btn-warning subscribe text-uppercase">subscribe</button>
+              <input type="text" name="email" placeholder="Enter your email" class="form-input">
+              <button type="submit" class="btn btn-warning subscribe text-uppercase">subscribe</button>
             </form>
           </div>
         </div>
@@ -248,7 +250,7 @@
     </section>
   </main>
   <footer>
-    <div class="container">
+    <div class="container footer-top">
       <div class="col col-5 footer-left">
         <a class="logo-link" href="#"><img src="images/Logo.png" alt="E-Shop"></a>
         <p class="shop-info">House My Brand designs clothing for the young, the old &everyone in between – but most importantly, for the fashionable</p>
@@ -271,7 +273,7 @@
         </ul>
       </div>
       <ul class="col col-7 footer-right">
-        <li class="col col-3">
+        <li class="col col-4">
           <h5 class="list-title">Shopping online</h5>
           <ul class="list-group">
             <li class="list-group-item">Order Status</li>
@@ -281,7 +283,7 @@
             <li class="list-group-item">Contact Us</li>
           </ul>
         </li>
-        <li class="col col-3">
+        <li class="col col-4">
           <h5 class="list-title">Information</h5>
           <ul class="list-group">
             <li class="list-group-item">Gift Cards</li>
@@ -291,7 +293,7 @@
             <li class="list-group-item">Site feedback</li>
           </ul>
         </li>
-        <li class="col col-3">
+        <li class="col col-4">
           <h5 class="list-title">Contact</h5>
           <ul class="list-group">
             <li class="list-group-item">store@uikit.com</li>
