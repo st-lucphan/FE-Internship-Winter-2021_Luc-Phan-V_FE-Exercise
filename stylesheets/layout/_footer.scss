@@ -37,6 +37,13 @@ footer {
       }
     }
   }
+  .copyright {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    text-align: center;
+    color: #ffffff;
+    border-top: 1px solid #ffffff;
+  }
 }
 .list-group {
   margin-top: 20px;
@@ -46,11 +53,4 @@ footer {
     line-height: 21px;
     font-weight: 400;
   }
-}
-.copyright {
-  padding-top: 24px;
-  padding-bottom: 24px;
-  text-align: center;
-  color: #ffffff;
-  border-top: 1px solid #ffffff;
 }

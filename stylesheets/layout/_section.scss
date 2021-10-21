@@ -1,11 +1,9 @@
 .section {
   width: 100%;
-  padding-top: 48px;
-  padding-bottom: 60px;
   .section-title {
     font-style: normal;
     font-weight: 300;
-    font-size: 32px;
+    font-size: map-get($font-size, xxxl);
     line-height: 48px;
     color: #333333;
     margin-bottom: 40px;
@@ -18,16 +16,41 @@
   &.section-banner {
     position: relative;
     top: 0;
-    padding-top: 0;
+    .banner::after {
+      width: 100%;
+      height: 100%;
+      background-color: #3333;
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+  &.section-collection {
+    padding-top: 48px;
+    padding-bottom: 48px;
   }
   &.section-product {
     position: relative;
+    padding-top: 48px;
+    padding-bottom: 60px;
   }
   &.section-newsletter {
     position: relative;
     padding-bottom: 0;
   }
+  &.section-newsletter::after {
+    width: 100%;
+    height: 100%;
+    background-color: #3333;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
   &.section-benefit {
     background-color: #f7f7f7;
+    padding-top: 48px;
+    padding-bottom: 54px;
   }
 }

@@ -3,14 +3,12 @@
   max-width: 1172px;
   padding-left: 10px;
   padding-right: 10px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
 }
 .row {
   display: flex;
   flex-direction: row;
-  margin-left: -10px;
-  margin-right: -10px;
+  margin: 0 -10px;
 }
 .col {
   padding-left: 10px;
