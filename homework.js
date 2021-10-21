@@ -50,7 +50,7 @@ Person.prototype.coding = function () {
 var a = [1, 2, 3, 4, 5, 5]
 var b = [1, 7, 8, 5]
 function filterArray(a, b) {
-  return a.filter(item => b.includes(item));
+  return [...new Set(a.filter(item => b.includes(item)))];
 }
 console.log(filterArray(a, b));
 //bai7
