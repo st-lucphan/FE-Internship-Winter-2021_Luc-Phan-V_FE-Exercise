@@ -1,3 +1,4 @@
+@media (min-width:376px) and (max-width: 1440px) {
 .container {
   width: 1172px;
   max-width: 1172px;
@@ -7,6 +8,7 @@
 }
 .row {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   margin: 0 -10px;
 }
@@ -17,5 +19,36 @@
 @for $i from 1 through 12 {
   .col-#{$i} {
     width: calc(100%*#{$i}/12);
+  }
+}
+}
+@media (max-width: 375px) {
+  .container {
+    width: 327px;
+    max-width: 327px;
+    padding-left: 4px;
+    padding-right: 4px;
+    margin: 0 auto;
+    &.header-content {
+      left: 0;
+    }
+  }
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -4px;
+  }
+  .col {
+    padding-left: 4px;
+    padding-right: 4px;    
+  }
+  @for $i from 1 through 12 {
+    .col-sm-#{$i} {
+      width: calc(100%*#{$i}/12);
+    }
+  }
+  .footer-right {
+    display: flex;
+    flex-wrap: wrap;
   }
 }

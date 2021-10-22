@@ -1,11 +1,11 @@
 .newsletter {
   position: absolute;
   top: 50%;
-  left: 10%;
+  left: 0;
+  padding-left: 10%;
   z-index: 1;
   .newsletter-title {
     width: 90%;
-    margin-left: 5%;
     color: #ffffff;
     font-size: map-get($font-size, xxl);
     font-weight: 400;
