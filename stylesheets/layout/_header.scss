@@ -4,10 +4,15 @@
   width: 100%;
   z-index: 1;
   .header-content {
-    height: 4.8rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    &.header-desktop {
+      height: 4.8rem;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    &.header-mobile {
+      display: none;
+    }
     .logo {
       padding-top: 6px;
       .logo-link {
@@ -47,6 +52,15 @@
     top: 0;
     background-color: #ffff;
     .header-content {
+      &.header-desktop {
+        display: none;
+      }
+      &.header-mobile {
+        height: 4.8rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
       .logo {
         .logo-link {
           color: black;

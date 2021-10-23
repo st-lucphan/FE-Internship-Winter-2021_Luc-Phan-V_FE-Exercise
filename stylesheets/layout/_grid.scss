@@ -1,4 +1,3 @@
-@media (min-width: 376px) and (max-width: 1440px) {
 .container {
   max-width: 1172px;
   padding-left: 10px;
@@ -20,7 +19,6 @@
   .col-#{$i} {
     width: calc(100%*#{$i}/12);
   }
-}
 }
 @media (max-width: 375px){
   .container {
