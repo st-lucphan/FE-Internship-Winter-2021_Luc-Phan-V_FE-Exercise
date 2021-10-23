@@ -1,6 +1,5 @@
-@media (min-width:376px) and (max-width: 1440px) {
+@media (min-width: 376px) and (max-width: 1440px) {
 .container {
-  width: 1172px;
   max-width: 1172px;
   padding-left: 10px;
   padding-right: 10px;
@@ -9,6 +8,7 @@
 .row {
   display: flex;
   flex-wrap: wrap;
+  width: 100%;
   flex-direction: row;
   margin: 0 -10px;
 }
@@ -22,9 +22,8 @@
   }
 }
 }
-@media (max-width: 375px) {
+@media (max-width: 375px){
   .container {
-    width: 327px;
     max-width: 327px;
     padding-left: 4px;
     padding-right: 4px;
@@ -46,9 +45,5 @@
     .col-sm-#{$i} {
       width: calc(100%*#{$i}/12);
     }
-  }
-  .footer-right {
-    display: flex;
-    flex-wrap: wrap;
   }
 }

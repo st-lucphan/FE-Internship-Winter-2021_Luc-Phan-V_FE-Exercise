@@ -29,3 +29,21 @@
     left: 20px;
   }
 }
+@media (max-width: 375px){
+  .card {
+    margin-top: 6px;
+    .card-title-link {
+      font-size: map-get($font-size, xs);
+      line-height: 18px;
+      font-weight: 300;
+    }
+    .card-price {
+      font-size: 10px;
+      line-height: 15px;
+    }
+    .card-original-price {
+      font-size: 10px;
+      line-height: 15px;
+    }
+  }
+}

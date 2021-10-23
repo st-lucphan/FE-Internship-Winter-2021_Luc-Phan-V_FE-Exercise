@@ -2,7 +2,7 @@
   position: absolute;
   top: 50%;
   left: 0;
-  padding-left: 10%;
+  right: 0;
   z-index: 1;
   .newsletter-title {
     width: 90%;
@@ -19,5 +19,28 @@
   }
   .subscribe {
     margin-left: 40px;
+  }
+}
+@media (max-width: 375px){
+  .newsletter{
+    top: 10%;
+    .newsletter-title {
+      font-size: map-get($font-size, sm);
+      line-height: 21px;
+      width: 60%;
+    }
+    .form-input {
+      width: 100%;
+      border: 0;
+      border-radius: 61px;
+      padding: 6px 12px;
+      margin-top: 24px;
+    }
+    .subscribe {
+      margin-top: 24px;
+      margin-left: 0;
+      padding: 8px 16px;
+      display: block;
+    }
   }
 }

@@ -35,6 +35,15 @@ footer {
         font-size: map-get($font-size, normal);
         line-height: 24px;
       }
+      .list-group {
+        margin-top: 20px;
+        .list-group-item {
+          padding-bottom: 16px;
+          font-size: map-get($font-size, sm);
+          line-height: 21px;
+          font-weight: 400;
+        }
+      }
     }
   }
   .copyright {
@@ -43,14 +52,24 @@ footer {
     text-align: center;
     color: #ffffff;
     border-top: 1px solid #ffffff;
+    font-size: map-get($font-size, xs);
   }
 }
-.list-group {
-  margin-top: 20px;
-  .list-group-item {
-    padding-bottom: 16px;
-    font-size: map-get($font-size, sm);
-    line-height: 21px;
-    font-weight: 400;
+@media (max-width: 375px){
+  footer {
+    .footer-top{
+      .footer-left{
+        .social-list {
+          display: none;
+        }
+      }
+      .footer-right {
+        display: flex;
+        flex-wrap: wrap;
+        .list-title {
+          padding-top: 24px;
+        }
+      }
+    }  
   }
 }

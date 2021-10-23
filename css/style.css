@@ -16,7 +16,6 @@ img {
 
 @media (min-width: 376px) and (max-width: 1440px) {
   .container {
-    width: 1172px;
     max-width: 1172px;
     padding-left: 10px;
     padding-right: 10px;
@@ -25,6 +24,7 @@ img {
   .row {
     display: flex;
     flex-wrap: wrap;
+    width: 100%;
     flex-direction: row;
     margin: 0 -10px; }
 
@@ -69,7 +69,6 @@ img {
     width: calc(100%*12/12); } }
 @media (max-width: 375px) {
   .container {
-    width: 327px;
     max-width: 327px;
     padding-left: 4px;
     padding-right: 4px;
@@ -120,46 +119,51 @@ img {
     width: calc(100%*11/12); }
 
   .col-sm-12 {
-    width: calc(100%*12/12); }
-
-  .footer-right {
-    display: flex;
-    flex-wrap: wrap; } }
-.container.header-content {
-  height: 4.8rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+    width: calc(100%*12/12); } }
+.header {
   position: absolute;
   top: 4.8rem;
-  padding-left: 10%;
+  width: 100%;
   z-index: 1; }
-  .container.header-content .logo {
-    padding-top: 6px; }
-    .container.header-content .logo .logo-link {
-      width: 138px;
-      height: 36px; }
-  .container.header-content .nav-list {
-    text-align: center; }
-    .container.header-content .nav-list .nav-item {
-      display: inline;
+  .header .header-content {
+    height: 4.8rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; }
+    .header .header-content .logo {
+      padding-top: 6px; }
+      .header .header-content .logo .logo-link {
+        width: 138px;
+        height: 36px; }
+    .header .header-content .nav-list {
+      text-align: center; }
+      .header .header-content .nav-list .nav-item {
+        display: inline;
+        height: 24px;
+        margin: 12px 48px; }
+        .header .header-content .nav-list .nav-item .nav-link {
+          line-height: 48px;
+          text-decoration: none;
+          color: #fbb03b;
+          font-weight: 700;
+          font-size: 18px; }
+    .header .header-content .option-item {
+      display: inline-block;
       height: 24px;
-      margin: 12px 48px; }
-      .container.header-content .nav-list .nav-item .nav-link {
-        line-height: 48px;
-        text-decoration: none;
-        color: #fbb03b;
-        font-weight: 700;
-        font-size: 18px; }
-  .container.header-content .option-item {
-    display: inline-block;
-    height: 24px;
-    margin: 12px 0;
-    padding-left: 12px;
-    padding-right: 12px; }
-    .container.header-content .option-item .option-link {
-      height: 24px; }
+      margin: 12px 0;
+      padding-left: 12px;
+      padding-right: 12px; }
+      .header .header-content .option-item .option-link {
+        height: 24px; }
 
+@media (max-width: 375px) {
+  .header {
+    top: 0;
+    background-color: #ffff; }
+    .header .header-content .logo .logo-link {
+      color: black; }
+    .header .header-content .nav-list {
+      display: none; } }
 .section {
   width: 100%; }
   .section .section-title {
@@ -208,6 +212,28 @@ img {
     padding-top: 48px;
     padding-bottom: 54px; }
 
+@media (max-width: 375px) {
+  .section.section-newsletter .newsletter-img {
+    content: url("../../images/newsletter.png"); }
+  .section.section-product {
+    padding-top: 48px;
+    padding-bottom: 52px; }
+    .section.section-product .text-center {
+      text-align: left; }
+  .section .section-title {
+    font-size: 18px;
+    margin-bottom: 16px;
+    line-height: 27px; }
+  .section .section-action {
+    position: absolute;
+    top: 9%;
+    right: 24px; }
+  .section.section-collection {
+    padding-top: 24px;
+    padding-bottom: 0; }
+  .section.section-benefit {
+    padding-top: 24px;
+    padding-bottom: 24px; } }
 footer {
   background-color: #fbb03b; }
   footer .footer-top {
@@ -239,21 +265,29 @@ footer {
         font-weight: 700;
         font-size: 16px;
         line-height: 24px; }
+      footer .footer-top .footer-right .list-group {
+        margin-top: 20px; }
+        footer .footer-top .footer-right .list-group .list-group-item {
+          padding-bottom: 16px;
+          font-size: 14px;
+          line-height: 21px;
+          font-weight: 400; }
   footer .copyright {
     padding-top: 24px;
     padding-bottom: 24px;
     text-align: center;
     color: #ffffff;
-    border-top: 1px solid #ffffff; }
+    border-top: 1px solid #ffffff;
+    font-size: 12px; }
 
-.list-group {
-  margin-top: 20px; }
-  .list-group .list-group-item {
-    padding-bottom: 16px;
-    font-size: 14px;
-    line-height: 21px;
-    font-weight: 400; }
-
+@media (max-width: 375px) {
+  footer .footer-top .footer-left .social-list {
+    display: none; }
+  footer .footer-top .footer-right {
+    display: flex;
+    flex-wrap: wrap; }
+    footer .footer-top .footer-right .list-title {
+      padding-top: 24px; } }
 .card {
   position: relative; }
   .card .card-title-link {
@@ -280,24 +314,40 @@ footer {
     top: 24px;
     left: 20px; }
 
+@media (max-width: 375px) {
+  .card {
+    margin-top: 6px; }
+    .card .card-title-link {
+      font-size: 12px;
+      line-height: 18px;
+      font-weight: 300; }
+    .card .card-price {
+      font-size: 10px;
+      line-height: 15px; }
+    .card .card-original-price {
+      font-size: 10px;
+      line-height: 15px; } }
 .btn {
   border-radius: 56px;
-  padding: 16px 28px; }
+  padding: 16px 28px;
+  font-weight: 700; }
+  .btn.btn-default {
+    color: #333333;
+    background-color: #ffff;
+    border: 0; }
+  .btn.btn-transparent {
+    border: 1px solid #c4c4c4;
+    background-color: transparent; }
+  .btn.btn-warning {
+    background-color: #fbb03b;
+    color: #333333;
+    border: 0; }
 
-.btn-default {
-  color: #333333;
-  background-color: #ffff;
-  border: 0; }
-
-.btn-transparent {
-  border: 1px solid #c4c4c4;
-  background-color: transparent; }
-
-.btn-warning {
-  background-color: #fbb03b;
-  color: #ffff;
-  border: 0; }
-
+@media (max-width: 375px) {
+  .btn {
+    border-radius: 24px;
+    padding: 4px 10px;
+    font-size: 10px; } }
 .form-input {
   width: 50%;
   border: 1px solid #333333;
@@ -306,9 +356,7 @@ footer {
 
 .badge {
   display: inline-block;
-  width: 56px;
-  height: 30px;
-  padding-top: 6px;
+  padding: 6px 9px;
   background: #ff0000;
   border-radius: 20px;
   font-weight: 700;
@@ -317,11 +365,16 @@ footer {
   text-align: center;
   color: #ffffff; }
 
+@media (max-width: 375px) {
+  .badge {
+    padding: 4px 8px;
+    font-size: 8px;
+    line-height: 12px; } }
 .newsletter {
   position: absolute;
   top: 50%;
   left: 0;
-  padding-left: 10%;
+  right: 0;
   z-index: 1; }
   .newsletter .newsletter-title {
     width: 90%;
@@ -337,6 +390,24 @@ footer {
   .newsletter .subscribe {
     margin-left: 40px; }
 
+@media (max-width: 375px) {
+  .newsletter {
+    top: 10%; }
+    .newsletter .newsletter-title {
+      font-size: 14px;
+      line-height: 21px;
+      width: 60%; }
+    .newsletter .form-input {
+      width: 100%;
+      border: 0;
+      border-radius: 61px;
+      padding: 6px 12px;
+      margin-top: 24px; }
+    .newsletter .subscribe {
+      margin-top: 24px;
+      margin-left: 0;
+      padding: 8px 16px;
+      display: block; } }
 .collection-list .collection-item {
   position: relative; }
   .collection-list .collection-item .collection-discount {
@@ -347,7 +418,7 @@ footer {
   .collection-list .collection-item .collection-btn {
     position: absolute;
     left: 40px;
-    top: 258px;
+    bottom: 54px;
     z-index: 1; }
   .collection-list .collection-item .collection-title {
     width: 55%;
@@ -372,11 +443,27 @@ footer {
   top: 0;
   left: 0; }
 
+@media (max-width: 375px) {
+  .collection-list .collection-item {
+    padding-top: 4px;
+    padding-bottom: 4px; }
+    .collection-list .collection-item .collection-btn {
+      left: 16px;
+      bottom: 16px; }
+    .collection-list .collection-item .collection-title {
+      width: 60%;
+      left: 16px;
+      top: 120px;
+      bottom: 44px;
+      font-size: 14px;
+      line-height: 21px;
+      font-weight: normal; } }
 .banner-content {
   width: 30%;
   position: absolute;
   top: 25%;
   left: 15%;
+  right: 0;
   z-index: 1; }
   .banner-content .banner-title {
     width: 100%;
@@ -410,6 +497,25 @@ footer {
 .banner-benefit {
   padding-left: 15%; }
 
+@media (max-width: 375px) {
+  .banner-content {
+    width: 100%;
+    position: absolute;
+    top: 25%;
+    left: 0;
+    right: 0;
+    padding-left: 24px;
+    z-index: 1; }
+    .banner-content .banner-title {
+      font-size: 48px;
+      line-height: 101.5%;
+      color: #ffffff; }
+
+  .banner .banner-img {
+    content: url("../../images/Fashion-home-iphone11.png"); }
+
+  .benefit {
+    display: none; } }
 .benefit-list .benefit-item {
   padding-right: 48px; }
   .benefit-list .benefit-item.benefit-horizontal {

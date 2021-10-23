@@ -10,7 +10,7 @@
     .collection-btn {
       position: absolute;
       left: 40px;
-      top: 258px;
+      bottom: 54px;
       z-index: 1;
     }
     .collection-title {
@@ -37,5 +37,26 @@
     position: absolute;
     top: 0;
     left: 0;
+  }
+}
+@media (max-width: 375px){
+  .collection-list {
+    .collection-item {
+      padding-top: 4px;
+      padding-bottom: 4px;
+      .collection-btn{
+        left: 16px;
+        bottom: 16px;
+      }
+      .collection-title {
+        width: 60%;
+        left: 16px;
+        top: 120px;
+        bottom: 44px;
+        font-size: map-get($font-size, sm);
+        line-height: 21px;
+        font-weight: normal;
+      }
+    }
   }
 }

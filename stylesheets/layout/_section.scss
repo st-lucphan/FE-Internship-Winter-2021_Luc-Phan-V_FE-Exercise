@@ -55,3 +55,37 @@
     padding-bottom: 54px;
   }
 }
+@media (max-width: 375px){
+  .section{
+    &.section-newsletter {
+      .newsletter-img {
+        content: url('../../images/newsletter.png')
+      }
+    }
+    &.section-product {
+      padding-top: 48px;
+      padding-bottom: 52px;
+      .text-center {
+        text-align: left;
+      }
+    }
+    .section-title {
+      font-size: map-get($font-size, lg);
+      margin-bottom: 16px;
+      line-height:  27px;
+    }
+    .section-action {
+      position: absolute;
+      top: 9%;
+      right: 24px;
+    }
+    &.section-collection {
+      padding-top: 24px;
+      padding-bottom: 0;
+    }
+    &.section-benefit {
+      padding-top: 24px;
+      padding-bottom: 24px;
+    }
+  }
+}

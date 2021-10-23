@@ -3,6 +3,7 @@
   position: absolute;
   top: 25%;
   left: 15%;
+  right: 0;
   z-index: 1;
   .banner-title {
     width: 100%;
@@ -38,4 +39,28 @@
 }
 .banner-benefit {
   padding-left: 15%;
+}
+@media (max-width: 375px) {
+  .banner-content {
+    width: 100%;
+    position: absolute;
+    top: 25%;
+    left: 0;
+    right: 0;
+    padding-left: 24px;
+    z-index: 1;
+    .banner-title {
+      font-size: 48px;
+      line-height: 101.5%;
+      color: #ffffff;
+    }
+  }
+  .banner {
+    .banner-img {
+      content: url('../../images/Fashion-home-iphone11.png')
+    }
+  }
+  .benefit {
+    display: none;
+  }
 }

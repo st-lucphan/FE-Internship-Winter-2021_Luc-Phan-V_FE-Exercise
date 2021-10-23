@@ -1,8 +1,6 @@
 .badge {
   display: inline-block;
-  width: 56px;
-  height: 30px;
-  padding-top: 6px;
+  padding: 6px 9px;
   background: #ff0000;
   border-radius: 20px;
   font-weight: 700;
@@ -10,4 +8,11 @@
   line-height: 18px;
   text-align: center;
   color: #ffffff;
+}
+@media (max-width: 375px){
+  .badge {
+    padding: 4px 8px;
+    font-size: 8px;
+    line-height: 12px;
+  }
 }

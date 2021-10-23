@@ -1,18 +1,26 @@
 .btn {
   border-radius: 56px;
   padding: 16px 28px;
+  font-weight: 700;
+  &.btn-default {
+    color: #333333;
+    background-color: #ffff;
+    border: 0;
+  }
+  &.btn-transparent {
+    border: 1px solid #c4c4c4;
+    background-color: transparent;
+  }
+  &.btn-warning {
+    background-color: $color-primary;
+    color: #333333;
+    border: 0;
+  }
 }
-.btn-default {
-  color: #333333;
-  background-color: #ffff;
-  border: 0;
-}
-.btn-transparent {
-  border: 1px solid #c4c4c4;
-  background-color: transparent;
-}
-.btn-warning {
-  background-color: $color-primary;
-  color: #ffff;
-  border: 0;
+@media (max-width: 375px){
+  .btn {
+    border-radius: 24px;
+    padding: 4px 10px;
+    font-size: 10px;
+  }
 }
