@@ -1,13 +1,18 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 html {
   font-size: 10px;
 }
 body {
   font-family: $font-primary;
 }
-ul {
-  list-style: none;
-}
 img {
   width: 100%;
   display: block;
+}
+a {
+  text-decoration: none;
 }

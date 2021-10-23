@@ -3,7 +3,7 @@ footer {
   .footer-top {
     display: flex;
     flex-direction: row;
-    color: #ffffff;
+    color: map-get($color, 'white');
     padding-top: 46px;
     padding-bottom: 40px;
     .footer-left {
@@ -16,7 +16,7 @@ footer {
       .shop-info {
         font-weight: 400;
         font-size: map-get($font-size, sm);
-        line-height: 21px;
+        line-height: 1.5;
         margin-top: 32px;
       }
       .social-list {
@@ -30,17 +30,16 @@ footer {
       display: flex;
       flex-direction: row;
       .list-title {
-        font-style: normal;
         font-weight: 700;
         font-size: map-get($font-size, normal);
-        line-height: 24px;
+        line-height: 1.5;
       }
       .list-group {
         margin-top: 20px;
         .list-group-item {
           padding-bottom: 16px;
           font-size: map-get($font-size, sm);
-          line-height: 21px;
+          line-height: 1.5;
           font-weight: 400;
         }
       }
@@ -50,8 +49,8 @@ footer {
     padding-top: 24px;
     padding-bottom: 24px;
     text-align: center;
-    color: #ffffff;
-    border-top: 1px solid #ffffff;
+    color: map-get($color, 'white');
+    border-top: 1px solid;
     font-size: map-get($font-size, xs);
   }
 }

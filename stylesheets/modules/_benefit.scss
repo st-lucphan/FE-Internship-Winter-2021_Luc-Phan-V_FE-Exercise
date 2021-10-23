@@ -12,18 +12,16 @@
       background-color: #fff3df;
     }
     .benefit-description {
-      font-style: normal;
       font-weight: normal;
       font-size: map-get($font-size, sm);
-      line-height: 21px;
-      color: #808080;
+      line-height: 1.5;
+      color: map-get($color, gray-B);
     }
     .benefit-title {
-      font-style: normal;
       font-weight: bold;
       font-size: map-get($font-size, normal);
-      line-height: 24px;
-      color: #333333;
+      line-height: 1.5;
+      color: map-get($color, gray-A);
     }
   }
 }
@@ -40,18 +38,17 @@
         height: 68px;
         padding: 18px 18px;
         margin-right: 20px;
-        background-color: #ffff;
+        background-color: map-get($color, 'white');
       }
       .benefit-title {
         font-size: map-get($font-size, xs);
-        line-height: 18px;
+        line-height: 1.5;
       }
       .benefit-description {
-        font-style: normal;
         font-weight: 400;
         font-size: 10px;
-        line-height: 15px;
-        color: #808080;
+        line-height: 1.5;
+        color: map-get($color, gray-B);
       }
     }
   }

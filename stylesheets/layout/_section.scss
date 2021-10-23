@@ -1,11 +1,10 @@
 .section {
   width: 100%;
   .section-title {
-    font-style: normal;
     font-weight: 300;
     font-size: map-get($font-size, xxxl);
-    line-height: 48px;
-    color: #333333;
+    line-height: 1.5;
+    color: map-get($color, gray-A);
     margin-bottom: 40px;
   }
   .section-action {
@@ -16,14 +15,16 @@
   &.section-banner {
     position: relative;
     top: 0;
-    .banner::after {
+    .banner{
+      &:after {
       width: 100%;
       height: 100%;
-      background: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.5) 100%);
-      content: "";
+      background: map-get($color, gray-D);
+      content: '';
       position: absolute;
       top: 0;
       left: 0;
+      }
     }
   }
   &.section-collection {
@@ -42,8 +43,8 @@
   &.section-newsletter::after {
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, #000000 33.28%, rgba(0, 0, 0, 0) 94.05%);
-    content: "";
+    background: map-get($color, gray-E);
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
@@ -72,7 +73,7 @@
     .section-title {
       font-size: map-get($font-size, lg);
       margin-bottom: 16px;
-      line-height:  27px;
+      line-height:  1.5;
     }
     .section-action {
       position: absolute;

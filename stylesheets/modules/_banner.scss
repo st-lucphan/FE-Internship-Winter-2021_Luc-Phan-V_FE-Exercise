@@ -8,19 +8,19 @@
   z-index: 1;
   .banner-title {
     width: 100%;
-    font-style: normal;
     font-weight: bold;
     font-size: 72px;
-    line-height: 101.5%;
-    color: #ffffff;
+    line-height: 1;
+    color: map-get($color, 'white');
   }
   .banner-action {
     font-weight: 700;
     font-size: map-get($font-size, xxl);
-    line-height: 36px;
+    line-height: 1.5;
     height: 36px;
-    color: #ffffff;
+    color: map-get($color, 'white');
     display: flex;
+    text-decoration: underline;
     .banner-action-img {
       width: 36px;
       height: 36px;
@@ -35,7 +35,7 @@
   position: absolute;
   left: 0;
   bottom: 0;
-  background-color: #ffffff;
+  background-color: map-get($color, 'white');
   border-radius: 0 70px 0 0;
 }
 .banner-benefit {
@@ -53,8 +53,8 @@
     z-index: 1;
     .banner-title {
       font-size: 48px;
-      line-height: 101.5%;
-      color: #ffffff;
+      line-height: 1;
+      color: map-get($color, 'white');
     }
   }
   .banner {

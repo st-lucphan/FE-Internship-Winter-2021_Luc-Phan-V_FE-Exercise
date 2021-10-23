@@ -1,3 +1,46 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
 * {
   padding: 0;
   margin: 0;
@@ -9,12 +52,12 @@ html {
 body {
   font-family: "Poppins", sans-serif; }
 
-ul {
-  list-style: none; }
-
 img {
   width: 100%;
   display: block; }
+
+a {
+  text-decoration: none; }
 
 .container {
   max-width: 1172px;
@@ -25,7 +68,6 @@ img {
 .row {
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
   flex-direction: row;
   margin: 0 -10px; }
 
@@ -146,8 +188,7 @@ img {
       height: 24px;
       margin: 12px 48px; }
       .header .header-content .nav-list .nav-item .nav-link {
-        line-height: 48px;
-        text-decoration: none;
+        line-height: 2.7;
         color: #fbb03b;
         font-weight: 700;
         font-size: 18px; }
@@ -163,7 +204,7 @@ img {
 @media (max-width: 375px) {
   .header {
     top: 0;
-    background-color: #ffff; }
+    background-color: #FFFFFF; }
     .header .header-content.header-desktop {
       display: none; }
     .header .header-content.header-mobile {
@@ -178,10 +219,9 @@ img {
 .section {
   width: 100%; }
   .section .section-title {
-    font-style: normal;
     font-weight: 300;
     font-size: 32px;
-    line-height: 48px;
+    line-height: 1.5;
     color: #333333;
     margin-bottom: 40px; }
   .section .section-action {
@@ -191,11 +231,11 @@ img {
   .section.section-banner {
     position: relative;
     top: 0; }
-    .section.section-banner .banner::after {
+    .section.section-banner .banner:after {
       width: 100%;
       height: 100%;
       background: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.5) 100%);
-      content: "";
+      content: '';
       position: absolute;
       top: 0;
       left: 0; }
@@ -213,7 +253,7 @@ img {
     width: 100%;
     height: 100%;
     background: linear-gradient(90deg, #000000 33.28%, rgba(0, 0, 0, 0) 94.05%);
-    content: "";
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
@@ -234,7 +274,7 @@ img {
   .section .section-title {
     font-size: 18px;
     margin-bottom: 16px;
-    line-height: 27px; }
+    line-height: 1.5; }
   .section .section-action {
     position: absolute;
     top: 9%;
@@ -250,7 +290,7 @@ footer {
   footer .footer-top {
     display: flex;
     flex-direction: row;
-    color: #ffffff;
+    color: #FFFFFF;
     padding-top: 46px;
     padding-bottom: 40px; }
     footer .footer-top .footer-left {
@@ -262,7 +302,7 @@ footer {
       footer .footer-top .footer-left .shop-info {
         font-weight: 400;
         font-size: 14px;
-        line-height: 21px;
+        line-height: 1.5;
         margin-top: 32px; }
       footer .footer-top .footer-left .social-list {
         margin-top: 56px; }
@@ -272,23 +312,22 @@ footer {
       display: flex;
       flex-direction: row; }
       footer .footer-top .footer-right .list-title {
-        font-style: normal;
         font-weight: 700;
         font-size: 16px;
-        line-height: 24px; }
+        line-height: 1.5; }
       footer .footer-top .footer-right .list-group {
         margin-top: 20px; }
         footer .footer-top .footer-right .list-group .list-group-item {
           padding-bottom: 16px;
           font-size: 14px;
-          line-height: 21px;
+          line-height: 1.5;
           font-weight: 400; }
   footer .copyright {
     padding-top: 24px;
     padding-bottom: 24px;
     text-align: center;
-    color: #ffffff;
-    border-top: 1px solid #ffffff;
+    color: #FFFFFF;
+    border-top: 1px solid;
     font-size: 12px; }
 
 @media (max-width: 375px) {
@@ -303,21 +342,20 @@ footer {
   position: relative; }
   .card .card-title-link {
     font-size: 16px;
-    line-height: 24px;
+    line-height: 1.5;
     font-weight: 300;
-    color: #333333;
-    text-decoration: none; }
+    color: #333333; }
   .card .card-price {
     font-weight: 400;
     font-size: 20px;
-    line-height: 30px;
+    line-height: 1.5;
     color: #333333; }
   .card .card-discount-price {
     color: #ff0000; }
   .card .card-original-price {
     font-weight: 400;
     font-size: 20px;
-    line-height: 30px;
+    line-height: 1.5;
     color: #cecece;
     float: right; }
   .card .card-discount {
@@ -330,21 +368,21 @@ footer {
     margin-top: 6px; }
     .card .card-title-link {
       font-size: 12px;
-      line-height: 18px;
+      line-height: 1.5;
       font-weight: 300; }
     .card .card-price {
       font-size: 10px;
-      line-height: 15px; }
+      line-height: 1.5; }
     .card .card-original-price {
       font-size: 10px;
-      line-height: 15px; } }
+      line-height: 1.5; } }
 .btn {
   border-radius: 56px;
   padding: 16px 28px;
   font-weight: 700; }
   .btn.btn-default {
     color: #333333;
-    background-color: #ffff;
+    background-color: #FFFFFF;
     border: 0; }
   .btn.btn-transparent {
     border: 1px solid #c4c4c4;
@@ -372,15 +410,15 @@ footer {
   border-radius: 20px;
   font-weight: 700;
   font-size: 12px;
-  line-height: 18px;
+  line-height: 1.5;
   text-align: center;
-  color: #ffffff; }
+  color: #FFFFFF; }
 
 @media (max-width: 375px) {
   .badge {
     padding: 4px 8px;
     font-size: 8px;
-    line-height: 12px; } }
+    line-height: 1.5; } }
 .newsletter {
   position: absolute;
   top: 50%;
@@ -389,10 +427,10 @@ footer {
   z-index: 1; }
   .newsletter .newsletter-title {
     width: 90%;
-    color: #ffffff;
+    color: #FFFFFF;
     font-size: 24px;
     font-weight: 400;
-    line-height: 36px; }
+    line-height: 1.5; }
   .newsletter .form-input {
     width: 60%;
     border: 0;
@@ -406,7 +444,7 @@ footer {
     top: 10%; }
     .newsletter .newsletter-title {
       font-size: 14px;
-      line-height: 21px;
+      line-height: 1.5;
       width: 60%; }
     .newsletter .form-input {
       width: 100%;
@@ -438,18 +476,17 @@ footer {
     right: 70%;
     top: 45%;
     bottom: 44%;
-    font-style: normal;
     font-weight: 400;
     font-size: 24px;
-    line-height: 36px;
-    color: #ffffff;
+    line-height: 1.5;
+    color: #FFFFFF;
     z-index: 1; }
-.collection-list .collection-item::after {
+.collection-list .collection-item:after {
   width: 100%;
   height: 100%;
   background-color: #3333;
   opacity: 0.5;
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: 0; }
@@ -467,7 +504,7 @@ footer {
       top: 120px;
       bottom: 44px;
       font-size: 14px;
-      line-height: 21px;
+      line-height: 1.5;
       font-weight: normal; } }
 .banner-content {
   width: 30%;
@@ -479,18 +516,18 @@ footer {
   z-index: 1; }
   .banner-content .banner-title {
     width: 100%;
-    font-style: normal;
     font-weight: bold;
     font-size: 72px;
-    line-height: 101.5%;
-    color: #ffffff; }
+    line-height: 1;
+    color: #FFFFFF; }
   .banner-content .banner-action {
     font-weight: 700;
     font-size: 24px;
-    line-height: 36px;
+    line-height: 1.5;
     height: 36px;
-    color: #ffffff;
-    display: flex; }
+    color: #FFFFFF;
+    display: flex;
+    text-decoration: underline; }
     .banner-content .banner-action .banner-action-img {
       width: 36px;
       height: 36px;
@@ -503,7 +540,7 @@ footer {
   position: absolute;
   left: 0;
   bottom: 0;
-  background-color: #ffffff;
+  background-color: #FFFFFF;
   border-radius: 0 70px 0 0; }
 
 .banner-benefit {
@@ -521,8 +558,8 @@ footer {
     z-index: 1; }
     .banner-content .banner-title {
       font-size: 48px;
-      line-height: 101.5%;
-      color: #ffffff; }
+      line-height: 1;
+      color: #FFFFFF; }
 
   .banner .banner-img {
     content: url("../../images/Fashion-home-iphone11.png"); }
@@ -539,16 +576,14 @@ footer {
   margin-right: 20px;
   background-color: #fff3df; }
 .benefit-list .benefit-item .benefit-description {
-  font-style: normal;
   font-weight: normal;
   font-size: 14px;
-  line-height: 21px;
+  line-height: 1.5;
   color: #808080; }
 .benefit-list .benefit-item .benefit-title {
-  font-style: normal;
   font-weight: bold;
   font-size: 16px;
-  line-height: 24px;
+  line-height: 1.5;
   color: #333333; }
 
 @media (max-width: 375px) {
@@ -562,15 +597,14 @@ footer {
       height: 68px;
       padding: 18px 18px;
       margin-right: 20px;
-      background-color: #ffff; }
+      background-color: #FFFFFF; }
     .benefit-list .benefit-item .benefit-title {
       font-size: 12px;
-      line-height: 18px; }
+      line-height: 1.5; }
     .benefit-list .benefit-item .benefit-description {
-      font-style: normal;
       font-weight: 400;
       font-size: 10px;
-      line-height: 15px;
+      line-height: 1.5;
       color: #808080; } }
 .text-uppercase {
   text-transform: uppercase; }

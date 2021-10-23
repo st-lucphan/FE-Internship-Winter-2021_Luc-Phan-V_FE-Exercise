@@ -1,18 +1,18 @@
 .badge {
   display: inline-block;
   padding: 6px 9px;
-  background: #ff0000;
+  background: map-get($color, 'red');
   border-radius: 20px;
   font-weight: 700;
   font-size: map-get($font-size, xs);
-  line-height: 18px;
+  line-height: 1.5;
   text-align: center;
-  color: #ffffff;
+  color: map-get($color, 'white');
 }
 @media (max-width: 375px){
   .badge {
     padding: 4px 8px;
     font-size: 8px;
-    line-height: 12px;
+    line-height: 1.5;
   }
 }

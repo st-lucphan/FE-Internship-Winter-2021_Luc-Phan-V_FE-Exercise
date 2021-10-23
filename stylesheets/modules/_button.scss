@@ -3,8 +3,8 @@
   padding: 16px 28px;
   font-weight: 700;
   &.btn-default {
-    color: #333333;
-    background-color: #ffff;
+    color: map-get($color, gray-A);
+    background-color: map-get($color, 'white');
     border: 0;
   }
   &.btn-transparent {
@@ -13,7 +13,7 @@
   }
   &.btn-warning {
     background-color: $color-primary;
-    color: #333333;
+    color: map-get($color, gray-A);
     border: 0;
   }
 }
