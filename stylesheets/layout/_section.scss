@@ -1,5 +1,4 @@
 .section {
-  width: 100%;
   .section-title {
     font-weight: 300;
     font-size: map-get($font-size, xxxl);
@@ -16,7 +15,7 @@
     position: relative;
     top: 0;
     .banner{
-      &:after {
+      &::after {
       width: 100%;
       height: 100%;
       background: map-get($color, gray-D);
@@ -40,15 +39,17 @@
     position: relative;
     padding-bottom: 0;
   }
-  &.section-newsletter::after {
-    width: 100%;
-    height: 100%;
-    background: map-get($color, gray-E);
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0.7;
+  &.section-newsletter {
+    &::after {
+      width: 100%;
+      height: 100%;
+      background: map-get($color, gray-E);
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0.7;
+    }
   }
   &.section-benefit {
     background-color: #f7f7f7;
