@@ -6,12 +6,12 @@ function Product(id, name, image, price, discount = 0, count = 0) {
   this.discount = discount;
   this.count = count;
 }
-let array = [ new Product(1, "T-Shirt Summer Vibes", "images/image.png", 119.99, 50),
+let arr = [ new Product(1, "T-Shirt Summer Vibes", "images/image.png", 119.99, 50),
               new Product(2, "Loose Knit 3/4 Sleeve", "images/image-2.png", 119.99),
               new Product(3, "Basic Slim Fit T-Shirt", "images/image-3.png", 79.99),
               new Product(4, "Loose Textured T-Shirt", "images/image-4.png", 119.99)]
-const productList = document.querySelector('.card-list');
-const htmls = array.map(function (item) {
+const $productList = document.querySelector('.card-list');
+const products = arr.map(function (item) {
   return `<li class="col col-3 col-sm-6">
               <div class="card">
                 <a href="#"><img src="${item.image}" alt="product" class="card-img"></a>
@@ -27,7 +27,7 @@ const htmls = array.map(function (item) {
               </div>
             </li>`;
 });
-productList.innerHTML = htmls.join('');
+$productList.innerHTML = products.join('');
 function set_cart(id, name,image, price, discount, count) {
   let cart_cur = localStorage.getItem('cart')?localStorage.getItem('cart'):[];
   if (cart_cur.length !== 0) cart_cur = JSON.parse(cart_cur);

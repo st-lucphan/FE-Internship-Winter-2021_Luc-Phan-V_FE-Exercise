@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="cart.css">
+  <title>Cart</title>
+</head>
+<body>
+  <main>
+    <div class="container">
+      <h3 class="cart-title">Shopping Cart</h3>
+    </div>
+    <div class="container table">
+      <div class="row table-header">
+        <div class="col col-4">
+          <h4>Product</h4>
+        </div>
+        <div class="col col-2">
+          <h4 class="text-center">Color</h4>
+        </div>
+        <div class="col col-1">
+          <h4 class="text-center">Size</h4>
+        </div>
+        <div class="col col-2">
+          <h4 class="text-center">Ammount</h4>
+        </div>
+        <div class="col col-2">
+          <h4 class="text-center">Price</h4>
+        </div>
+        <div class="col col-1">
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <ul class="cart-list">
+        <li class="row cart-item">
+          <div class="col col-4 cell justify-conent-left" >
+            <img src="images/image.png" alt="T-Shirt Summer Vibes">
+            <p class="cart-item-name">T-Shirt Summer Vibes</p>
+          </div>
+          <div class="col col-2 cell">
+            <p>White</p>
+          </div>
+          <div class="col col-1 cell">
+            <p>XL</h4>
+          </div>
+          <div class="col col-2 cell">
+            <input type="text" class="cart-input">
+          </div>
+          <div class="col col-2 cell">
+            <h4 class="price">$89.99</h4>
+          </div>
+          <div class="col col-1 cell">
+            <button class="btn-remove">X</button>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="container">
+      <div class="row checkout">
+        <div class="col col-4">
+          <a href="#" class="back">Continue Shopping</a>
+        </div>
+        <div class="col col-4">
+          <input type="text" class="cart-input" placeholder="Promo Code">
+        </div>
+        <div class="col col-2">
+          <span>Total cost</span>
+          <span>$159,98</span>
+        </div>
+        <div class="col col-2">
+          <button class="btn btn-warning">Checkout</button>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
