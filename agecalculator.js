@@ -1,5 +1,5 @@
 const newInput = document.createElement('input');
-const newButton = document.createElement('button')
+const newButton = document.createElement('button');
 const newP = document.createElement('p');
 const attr = document.createAttribute('value');
 const newContent = document.createTextNode('abcd');
