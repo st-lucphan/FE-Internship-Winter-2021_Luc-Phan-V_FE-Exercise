@@ -6,28 +6,34 @@ function Product(id, name, image, price, discount = 0, count = 0) {
   this.discount = discount;
   this.count = count;
 }
-let arr = [ new Product(1, "T-Shirt Summer Vibes", "images/image.png", 119.99, 50),
+function fetchData() {
+  const data = [ new Product(1, "T-Shirt Summer Vibes", "images/image.png", 119.99, 50),
               new Product(2, "Loose Knit 3/4 Sleeve", "images/image-2.png", 119.99),
               new Product(3, "Basic Slim Fit T-Shirt", "images/image-3.png", 79.99),
               new Product(4, "Loose Textured T-Shirt", "images/image-4.png", 119.99)];
-const $productList = document.querySelector('.card-list');
-const products = arr.map(function (item) {
-  return `<li class="col col-3 col-sm-6">
-              <div class="card">
-                <a href="#"><img src="${item.image}" alt="product" class="card-img"></a>
-                ${item.discount > 0 ? `<span class="badge card-discount">-${item.discount}%</span>` : ''}               
-                <div class="card-content">
-                  <h4 class="card-title"><a href="#" class="card-title-link">${item.name}</a></h4>
-                  <span class="card-price ${item.discount > 0 ? 'card-discount-price' : ''}">$${(item.price - (item.price * item.discount / 100)).toFixed(2)}</span>
-                  ${item.discount > 0 ? `<span class="card-original-price">$${item.price}</span>` : ''}
+  localStorage.setItem('data', JSON.stringify(data));
+  return data;
+}
+function renderProduct(arr) {
+  const $productList = document.querySelector('.card-list');
+  const products = arr.map(function (item) {
+    return `<li class="col col-3 col-sm-6">
+                <div class="card">
+                  <a href="#"><img src="${item.image}" alt="product" class="card-img"></a>
+                  ${item.discount > 0 ? `<span class="badge card-discount">-${item.discount}%</span>` : ''}               
+                  <div class="card-content">
+                    <h4 class="card-title"><a href="#" class="card-title-link">${item.name}</a></h4>
+                    <span class="card-price ${item.discount > 0 ? 'card-discount-price' : ''}">$${(item.price - (item.price * item.discount / 100)).toFixed(2)}</span>
+                    ${item.discount > 0 ? `<span class="card-original-price">$${item.price}</span>` : ''}
+                  </div>
+                  <div class="card-hover-icons">
+                    <button class="btn btn-warning" onclick="set_cart(${item.id},'${item.name}','${item.image}','${item.price}','${item.discount}',1)"> Add to cart</button>
+                  </div>
                 </div>
-                <div class="card-hover-icons">
-                  <button class="btn btn-warning" onclick="set_cart(${item.id},'${item.name}','${item.image}','${item.price}','${item.discount}',1)"> Add to cart</button>
-                </div>
-              </div>
-            </li>`;
-});
-$productList.innerHTML = products.join('');
+              </li>`;
+  });
+  $productList.innerHTML = products.join('');
+}
 function set_cart(id, name,image, price, discount, count) {
   let cart_cur = localStorage.getItem('cart')?localStorage.getItem('cart'):[];
   if (cart_cur.length !== 0) cart_cur = JSON.parse(cart_cur);
@@ -153,7 +159,6 @@ function render_Cart() {
 function get_cart(){
   const $cartList = document.querySelector('.cart-list');
   let cart_cur = localStorage.getItem('cart') ?? [];
-  
   if (cart_cur.length === 0) return;
   cart_cur = JSON.parse(cart_cur);
   const List=cart_cur.map(item => {
@@ -233,3 +238,5 @@ function calculateTotalPrice(cart_cur){
   const total=cart_cur.reduce((total, item) => item.count*(item.price-item.price*item.discount/100) + total, 0);
   return total.toFixed(2);
 }
+const arr = fetchData();
+renderProduct(arr);
