@@ -1,5 +1,10 @@
 .card {
   position: relative;
+  &:hover {
+    .card-hover-icons{
+      display: block;
+    }
+  }
   .card-title-link {
     font-size: map-get($font-size, normal);
     line-height: 1.5;
@@ -26,6 +31,15 @@
     position: absolute;
     top: 24px;
     left: 20px;
+  }
+  .card-hover-icons {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+    text-align: center;
   }
 }
 @media (max-width: 375px){

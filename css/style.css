@@ -485,6 +485,8 @@ footer {
       padding-top: 24px; } }
 .card {
   position: relative; }
+  .card:hover .card-hover-icons {
+    display: block; }
   .card .card-title-link {
     font-size: 16px;
     line-height: 1.5;
@@ -507,6 +509,14 @@ footer {
     position: absolute;
     top: 24px;
     left: 20px; }
+  .card .card-hover-icons {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+    text-align: center; }
 
 @media (max-width: 375px) {
   .card {
