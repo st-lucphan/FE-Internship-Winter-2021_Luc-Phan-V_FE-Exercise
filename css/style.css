@@ -245,6 +245,59 @@ a {
 
   .col-sm-12 {
     width: calc(100%*12/12); } }
+@media (min-width: 576px) and (max-width: 768px) {
+  .container {
+    max-width: 630px;
+    padding-left: 8px;
+    padding-right: 8px;
+    margin: 0 auto; }
+    .container.header-content {
+      left: 0; }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -8px; }
+
+  .col {
+    padding-left: 8px;
+    padding-right: 8px; }
+
+  .col-md-1 {
+    width: calc(100%*1/12); }
+
+  .col-md-2 {
+    width: calc(100%*2/12); }
+
+  .col-md-3 {
+    width: calc(100%*3/12); }
+
+  .col-md-4 {
+    width: calc(100%*4/12); }
+
+  .col-md-5 {
+    width: calc(100%*5/12); }
+
+  .col-md-6 {
+    width: calc(100%*6/12); }
+
+  .col-md-7 {
+    width: calc(100%*7/12); }
+
+  .col-md-8 {
+    width: calc(100%*8/12); }
+
+  .col-md-9 {
+    width: calc(100%*9/12); }
+
+  .col-md-10 {
+    width: calc(100%*10/12); }
+
+  .col-md-11 {
+    width: calc(100%*11/12); }
+
+  .col-md-12 {
+    width: calc(100%*12/12); } }
 .header {
   position: absolute;
   top: 4.8rem;
@@ -297,6 +350,13 @@ a {
       color: black; }
     .header .header-content .nav-list {
       display: none; } }
+@media (min-width: 576px) and (max-width: 768px) {
+  .header {
+    top: 2.8rem; }
+    .header .header-content.header-mobile {
+      display: none; }
+    .header .header-content .nav-list .nav-item {
+      margin: 12px 12px; } }
 .section .section-title {
   font-weight: 300;
   font-size: 32px;
@@ -364,6 +424,12 @@ a {
   .section.section-benefit {
     padding-top: 24px;
     padding-bottom: 24px; } }
+@media (min-width: 576px) and (max-width: 768px) {
+  .section .section-action {
+    position: absolute;
+    top: 0;
+    transform: translateY(100%);
+    right: 10%; } }
 footer {
   background-color: #fbb03b; }
   footer .footer-top {
@@ -536,6 +602,19 @@ footer {
       margin-left: 0;
       padding: 8px 16px;
       display: block; } }
+@media (min-width: 576px) and (max-width: 768px) {
+  .newsletter {
+    top: 50%;
+    transform: translateY(-50%); }
+    .newsletter .newsletter-title {
+      font-size: 16px; }
+    .newsletter .form-input {
+      width: 55%;
+      display: inline-block; }
+    .newsletter .subscribe {
+      margin-left: 0;
+      display: inline-block;
+      padding: 16px 16px; } }
 .collection-list .collection-item {
   position: relative; }
   .collection-list .collection-item .collection-discount {
@@ -642,6 +721,24 @@ footer {
 
   .banner .banner-img {
     content: url("../../images/Fashion-home-iphone11.png"); }
+
+  .benefit {
+    display: none; } }
+@media (min-width: 576px) and (max-width: 768px) {
+  .banner-content {
+    width: 65%;
+    padding-left: 0; }
+    .banner-content .banner-title {
+      font-size: 24px; }
+    .banner-content .banner-action {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 1;
+      height: 16px; }
+      .banner-content .banner-action .banner-action-img {
+        width: 16px;
+        height: 16px;
+        margin-right: 16px; }
 
   .benefit {
     display: none; } }

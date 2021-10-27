@@ -44,3 +44,21 @@
     }
   }
 }
+@media (min-width:576px) and (max-width: 768px){
+  .newsletter{
+    top: 50%;
+    transform: translateY(-50%);
+    .newsletter-title {
+      font-size: map-get($font-size, normal);
+    }
+    .form-input {
+      width: 55%;
+      display: inline-block;
+    }
+    .subscribe {
+      margin-left: 0;
+      display: inline-block;
+      padding: 16px 16px;
+    }
+  }
+}

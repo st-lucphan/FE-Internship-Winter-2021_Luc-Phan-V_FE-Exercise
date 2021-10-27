@@ -44,3 +44,29 @@
     }
   }
 }
+
+@media (min-width: 576px) and (max-width: 768px){
+  .container {
+    max-width: 630px;
+    padding-left: 8px;
+    padding-right: 8px;
+    margin: 0 auto;
+    &.header-content {
+      left: 0;
+    }
+  }
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -8px;
+  }
+  .col {
+    padding-left: 8px;
+    padding-right: 8px;    
+  }
+  @for $i from 1 through 12 {
+    .col-md-#{$i} {
+      width: calc(100%*#{$i}/12);
+    }
+  }
+}

@@ -66,3 +66,26 @@
     display: none;
   }
 }
+@media (min-width:576px) and (max-width: 768px){
+  .banner-content {
+    width: 65%;
+    padding-left: 0;
+    .banner-title {
+      font-size: 24px;
+    }
+    .banner-action {
+      font-weight: 700;
+      font-size: map-get($font-size, normal);
+      line-height: 1;
+      height: 16px;
+      .banner-action-img {
+        width: 16px;
+        height: 16px;
+        margin-right: 16px;
+      }
+    }
+  }
+  .benefit {
+    display: none;
+  }
+}

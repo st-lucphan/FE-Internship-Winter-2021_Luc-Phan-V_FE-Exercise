@@ -91,3 +91,13 @@
     }
   }
 }
+@media (min-width: 576px) and (max-width: 768px){
+  .section {
+    .section-action {
+      position: absolute;
+      top: 0;
+      transform: translateY(100%);
+      right: 10%;
+    }
+  }
+}
