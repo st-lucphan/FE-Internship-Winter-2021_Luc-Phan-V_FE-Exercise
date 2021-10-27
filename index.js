@@ -94,9 +94,15 @@ function render_Cart() {
                             </div>
                           </header>
                           <section class="section section-cart">
-                            <div class="container">
+                            <div class="container section-cart-header">
                               <h3 class="cart-title">Shopping Cart</h3>
+                              <div class="status">
+                                <img src="images/noun_cart_2102832.png" alt="E-shop" class="bg-warning">
+                                <hr class="line">
+                                <img src="images/delivery.svg" alt="Delivery">
+                              </div>
                             </div>
+                            
                             <div class="container table">
                               <div class="row table-header">
                                 <div class="col col-4">
@@ -164,7 +170,7 @@ function get_cart(){
   const List=cart_cur.map(item => {
     return `
         <li class="row cart-item">
-          <div class="col col-4 cell justify-conent-left" >
+          <div class="col col-4 cell justify-content-left" >
             <img src="${item.image}" alt="T-Shirt Summer Vibes">
             <p class="cart-item-name">${item.name}</p>
           </div>

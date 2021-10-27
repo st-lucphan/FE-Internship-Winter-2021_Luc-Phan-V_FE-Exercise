@@ -796,4 +796,133 @@ footer {
 .text-warning {
   color: #fbb03b; }
 
+.text-bold {
+  font-weight: bold; }
+
+.bg-warning {
+  background-color: #fbb03b; }
+
+.cart-header {
+  position: static;
+  padding: 48px 0 24px 0;
+  border-bottom: 1px solid #E5E5E5; }
+  .cart-header .cart-nav-link {
+    line-height: 2.7;
+    color: #000000;
+    font-weight: 700;
+    font-size: 18px; }
+
+.section-cart {
+  padding-bottom: 50px; }
+  .section-cart .section-cart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 52px 0 66px 0; }
+    .section-cart .section-cart-header .cart-title {
+      font-size: 20px;
+      font-weight: bold; }
+    .section-cart .section-cart-header .status {
+      display: flex;
+      align-items: center; }
+      .section-cart .section-cart-header .status .line {
+        width: 70px;
+        border: 1px solid #EEEEEE;
+        margin: 0 16px; }
+      .section-cart .section-cart-header .status img {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        padding: 8px 8px; }
+
+.table {
+  font-size: 14px; }
+  .table .table-header {
+    color: #C1C1C1;
+    margin-bottom: 32px; }
+
+.cart-list .cart-item {
+  height: 70px;
+  margin-bottom: 10px; }
+  .cart-list .cart-item .cell {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .cart-list .cart-item .cell.justify-content-left {
+      justify-content: left; }
+  .cart-list .cart-item img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-right: 12px; }
+  .cart-list .cart-item .cart-item-name {
+    font-size: 16px;
+    font-weight: bold; }
+  .cart-list .cart-item .btn-remove {
+    border: 0 solid;
+    background-color: #FFFFFF; }
+  .cart-list .cart-item .ammount {
+    position: relative; }
+    .cart-list .cart-item .ammount .ammount-input {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      font-size: 14px;
+      text-align: center;
+      border-radius: 36px;
+      border: 1px solid #D8D8D8; }
+    .cart-list .cart-item .ammount .decrease {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 35px;
+      padding: 10px;
+      border: 0 solid;
+      background-color: #FFFFFF; }
+    .cart-list .cart-item .ammount .increase {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 35px;
+      padding: 10px;
+      border: 0 solid;
+      background-color: #FFFFFF; }
+  .cart-list .cart-item .price {
+    font-weight: bold; }
+
+.checkout {
+  display: flex;
+  align-items: center;
+  margin-top: 88px;
+  font-size: 16px; }
+  .checkout .back {
+    height: 24px;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 700;
+    color: #000000; }
+    .checkout .back img {
+      width: 24px;
+      padding-right: 12px; }
+  .checkout .promote-code {
+    position: relative; }
+    .checkout .promote-code .promote-input {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      padding-left: 16px;
+      font-size: 14px;
+      border-radius: 36px;
+      border: 1px solid #D8D8D8;
+      width: 80%; }
+    .checkout .promote-code .send-img {
+      width: 16px;
+      height: 16px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 30%; }
+  .checkout .total-cost {
+    font-size: 16px;
+    font-weight: bold; }
+
 /*# sourceMappingURL=style.css.map */
