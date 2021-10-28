@@ -7,16 +7,16 @@ function Product(id, name, image, price, discount = 0, count = 0) {
   this.count = count;
 }
 function fetchData() {
-  const data = [ new Product(1, "T-Shirt Summer Vibes", "images/image.png", 119.99, 50),
-              new Product(2, "Loose Knit 3/4 Sleeve", "images/image-2.png", 119.99),
-              new Product(3, "Basic Slim Fit T-Shirt", "images/image-3.png", 79.99),
-              new Product(4, "Loose Textured T-Shirt", "images/image-4.png", 119.99)];
+  const data = [ new Product(1, 'T-Shirt Summer Vibes', 'images/image.png', 119.99, 50),
+              new Product(2, 'Loose Knit 3/4 Sleeve', 'images/image-2.png', 119.99),
+              new Product(3, 'Basic Slim Fit T-Shirt', 'images/image-3.png', 79.99),
+              new Product(4, 'Loose Textured T-Shirt', 'images/image-4.png', 119.99)];
   localStorage.setItem('data', JSON.stringify(data));
   return data;
 }
-function renderProduct(arr) {
+function renderProduct(data) {
   const $productList = document.querySelector('.card-list');
-  const products = arr.map(function (item) {
+  const products = data.map(function (item) {
     return `<li class="col col-3 col-sm-6">
                 <div class="card">
                   <a href="#"><img src="${item.image}" alt="product" class="card-img"></a>
@@ -27,19 +27,19 @@ function renderProduct(arr) {
                     ${item.discount > 0 ? `<span class="card-original-price">$${item.price}</span>` : ''}
                   </div>
                   <div class="card-hover-icons">
-                    <button class="btn btn-warning" onclick="set_cart(${item.id},'${item.name}','${item.image}','${item.price}','${item.discount}',1)"> Add to cart</button>
+                    <button class="btn btn-warning" onclick="addToCart(${item.id},'${item.name}','${item.image}','${item.price}','${item.discount}',1)"> Add to cart</button>
                   </div>
                 </div>
               </li>`;
   });
   $productList.innerHTML = products.join('');
 }
-function set_cart(id, name,image, price, discount, count) {
-  let cart_cur = localStorage.getItem('cart')?localStorage.getItem('cart'):[];
+function addToCart(id, name, image, price, discount, count) {
+  let cart_cur = localStorage.getItem('cart') ? localStorage.getItem('cart') : [];
   if (cart_cur.length !== 0) cart_cur = JSON.parse(cart_cur);
-  let test=cart_cur.findIndex(item=>item.id==id);
-	if (test>-1) 
-    {cart_cur[test].count=cart_cur[test].count+1} 
+  let test = cart_cur.findIndex(item => item.id == id);
+  if (test > -1) {
+    cart_cur[test].count = cart_cur[test].count+1 } 
   else{
     const product = {
       id:id,
@@ -54,8 +54,8 @@ function set_cart(id, name,image, price, discount, count) {
   localStorage.setItem('cart', JSON.stringify(cart_cur));
 }
 //Render cart layout
-function render_Cart() {
-  document.body.innerHTML=`
+function renderCart() {
+  document.body.innerHTML = `
                             <header class="header cart-header">
                             <div class="container">
                               <div class="header-content header-desktop ">
@@ -83,7 +83,7 @@ function render_Cart() {
                                       <a href="#" class="option-link"><img src="images/search_black.svg" alt="search"></a>
                                     </li>
                                     <li class="option-item">
-                                      <a href="#" class="option-link"><img src="images/cart_black.svg" alt="cart" onclick="render_Cart()"></a>
+                                      <a href="#" class="option-link"><img src="images/cart_black.svg" alt="cart" onclick="renderCart()"></a>
                                     </li>
                                     <li class="option-item">
                                       <a href="#" class="option-link"><img src="images/avatar_black.svg" alt="avatar"></a>
@@ -102,7 +102,6 @@ function render_Cart() {
                                 <img src="images/delivery.svg" alt="Delivery">
                               </div>
                             </div>
-                            
                             <div class="container table">
                               <div class="row table-header">
                                 <div class="col col-4">
@@ -153,21 +152,21 @@ function render_Cart() {
                               </div>
                             </div>
                           </section>`; 
-  const $totalPrice = document.querySelector(".total-cost");
-  let cart_cur = localStorage.getItem('cart') ?? [];
-  if (cart_cur.length === 0) return;
-  cart_cur = JSON.parse(cart_cur);
-  let total = calculateTotalPrice(cart_cur);
-  $totalPrice.innerHTML=`$${total}`;                       
-  get_cart();
+  const $totalPrice = document.querySelector('.total-cost');
+  let currentCart = localStorage.getItem('cart') ?? [];
+  if (currentCart.length === 0) return;
+  currentCart = JSON.parse(currentCart);
+  let total = calculateTotalPrice(currentCart);
+  $totalPrice.innerHTML = `$${total}`;                       
+  getCart();
 }
 //render cart-list
-function get_cart(){
+function getCart(){
   const $cartList = document.querySelector('.cart-list');
-  let cart_cur = localStorage.getItem('cart') ?? [];
-  if (cart_cur.length === 0) return;
-  cart_cur = JSON.parse(cart_cur);
-  const List=cart_cur.map(item => {
+  let currentCart = localStorage.getItem('cart') ?? [];
+  if (currentCart.length === 0) return;
+  currentCart = JSON.parse(currentCart);
+  const List = currentCart.map(item => {
     return `
         <li class="row cart-item">
           <div class="col col-4 cell justify-content-left" >
@@ -189,59 +188,59 @@ function get_cart(){
             <h4 class="price">${(item.price - item.price * item.discount / 100).toFixed(2)}</h4>
           </div>
           <div class="col col-1 cell">
-            <button class="btn-remove text-bold" onclick="remove_cart(${item.id})">X</button>
+            <button class="btn-remove text-bold" onclick="removeCart(${item.id})">X</button>
           </div>
         </li>
     `;
   });
-  $cartList.innerHTML=List.join('');
+  $cartList.innerHTML = List.join('');
 }
 //Delete cart-item
-function remove_cart(id) {
-  let cart_cur = localStorage.getItem('cart') ?? [];
-  let $totalPrice = document.querySelector(".total-cost");
+function removeCart(id) {
+  let currentCart = localStorage.getItem('cart') ?? [];
+  let $totalPrice = document.querySelector('.total-cost');
   
-  if (cart_cur.length === 0) return;
-  cart_cur = JSON.parse(cart_cur);
-  cart_cur = cart_cur.filter(item => item.id !== id);
-  let total = calculateTotalPrice(cart_cur);
-  $totalPrice.innerHTML=`$${total}`;
-  localStorage.setItem('cart', JSON.stringify(cart_cur));
-  get_cart();
+  if (currentCart.length === 0) return;
+  currentCart = JSON.parse(currentCart);
+  currentCart = currentCart.filter(item => item.id !== id);
+  let total = calculateTotalPrice(currentCart);
+  $totalPrice.innerHTML = `$${total}`;
+  localStorage.setItem('cart', JSON.stringify(currentCart));
+  getCart();
 }
 // increase ammount of product
 function increase(id){
-  let $count=document.getElementById("count"+id);
-  let cart_cur = localStorage.getItem('cart') ?? [];
+  let $count=document.getElementById("count" + id);
+  let currentCart = localStorage.getItem('cart') ?? [];
   let $totalPrice = document.querySelector(".total-cost");
   
-  if (cart_cur.length !== 0) cart_cur = JSON.parse(cart_cur);
-  let test=cart_cur.findIndex(item=>item.id==id);
-  cart_cur[test].count=cart_cur[test].count+1;
-  console.log( cart_cur[test].count);
-  $count.value=cart_cur[test].count;
-  let total = calculateTotalPrice(cart_cur);
-  $totalPrice.innerHTML=`$${total}`;
-  localStorage.setItem('cart', JSON.stringify(cart_cur));
+  if (currentCart.length !== 0) currentCart = JSON.parse(currentCart);
+  let test = currentCart.findIndex(item => item.id == id);
+  currentCart[test].count = currentCart[test].count + 1;
+  console.log(currentCart[test].count);
+  $count.value = currentCart[test].count;
+  let total = calculateTotalPrice(currentCart);
+  $totalPrice.innerHTML = `$${total}`;
+  localStorage.setItem('cart', JSON.stringify(currentCart));
 }
 // decrease ammount of product
 function decrease(id){
-  let $count=document.getElementById("count"+id);
-  let cart_cur = localStorage.getItem('cart') ?? [];
+  let $count = document.getElementById("count"+id);
+  let currentCart = localStorage.getItem('cart') ?? [];
   let $totalPrice = document.querySelector(".total-cost");
 
-  if (cart_cur.length !== 0) cart_cur = JSON.parse(cart_cur);
-  let test=cart_cur.findIndex(item=>item.id==id);
-  cart_cur[test].count=cart_cur[test].count-1;
-  console.log( cart_cur[test].count);
-  $count.value=cart_cur[test].count;
-  let total = calculateTotalPrice(cart_cur);
-  $totalPrice.innerHTML=`$${total}`;
-  localStorage.setItem('cart', JSON.stringify(cart_cur));
+  if (currentCart.length !== 0) currentCart = JSON.parse(currentCart);
+  let itemId = currentCart.findIndex(item => item.id == id);
+  currentCart[itemId].count = currentCart[itemId].count - 1;
+  console.log( currentCart[itemId].count);
+  $count.value = currentCart[itemId].count;
+  let total = calculateTotalPrice(currentCart);
+  $totalPrice.innerHTML = `$${total}`;
+  localStorage.setItem('cart', JSON.stringify(currentCart));
 }
 // calcalate total price
-function calculateTotalPrice(cart_cur){
-  const total=cart_cur.reduce((total, item) => item.count*(item.price-item.price*item.discount/100) + total, 0);
+function calculateTotalPrice(currentCart) {
+  const total = currentCart.reduce((total, item) => item.count * (item.price-item.price * item.discount / 100) + total, 0);
   return total.toFixed(2);
 }
 const arr = fetchData();
