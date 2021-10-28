@@ -6,6 +6,7 @@ function Product(id, name, image, price, discount = 0, count = 0) {
   this.discount = discount;
   this.count = count;
 }
+
 function fetchData() {
   const data = [ new Product(1, 'T-Shirt Summer Vibes', 'images/image.png', 119.99, 50),
               new Product(2, 'Loose Knit 3/4 Sleeve', 'images/image-2.png', 119.99),
@@ -14,6 +15,7 @@ function fetchData() {
   localStorage.setItem('data', JSON.stringify(data));
   return data;
 }
+
 function renderProduct(data) {
   const $productList = document.querySelector('.card-list');
   const products = data.map(function (item) {
@@ -34,9 +36,9 @@ function renderProduct(data) {
   });
   $productList.innerHTML = products.join('');
 }
+
 function addToCart(id, name, image, price, discount, count) {
-  let currentCart = localStorage.getItem('cart') ? localStorage.getItem('cart') : [];
-  if (currentCart.length !== 0) currentCart = JSON.parse(currentCart);
+  let currentCart = localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : [];
   let itemId = currentCart.findIndex(item => item.id == id);
   if (itemId > -1) {
     currentCart[itemId].count = currentCart[itemId].count+1 } 
@@ -53,6 +55,7 @@ function addToCart(id, name, image, price, discount, count) {
   };
   localStorage.setItem('cart', JSON.stringify(currentCart));
 }
+
 //Render cart layout
 function renderCart() {
   const $cartLayout = document.querySelector('.cart-layout');
@@ -61,18 +64,19 @@ function renderCart() {
   $cartLayout.style.display = 'block';
   getCart();
 }
+
 //render cart-list
 function getCart(){
   const $cartList = document.querySelector('.cart-list');
   const $totalPrice = document.querySelector('.total-cost');
-  let currentCart = localStorage.getItem('cart') ?? [];
+  let currentCart = localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : [];
   if (currentCart.length === 0 ) {
     const list = `<h3>Không có sản phẩm nào trong giỏ hàng!</h3>`;
     $cartList.innerHTML = list;
     return;
   }
   else {
-    currentCart = JSON.parse(currentCart);
+    //currentCart = JSON.parse(currentCart);
     const list = currentCart.map(item => {
     return `
         <li class="row cart-item">
@@ -105,27 +109,31 @@ function getCart(){
     $totalPrice.innerHTML = `$${total}`;
   }
 }
+
 //Delete cart-item
 function removeCart(id) {
-  let currentCart = localStorage.getItem('cart') ?? [];
+  const cart =  localStorage.getItem('cart');
+  let currentCart = cart ? JSON.parse(cart) : [];
   let $totalPrice = document.querySelector('.total-cost');
   
   if (currentCart.length === 0) return;
-  currentCart = JSON.parse(currentCart);
   currentCart = currentCart.filter(item => item.id !== id);
   let total = calculateTotalPrice(currentCart);
   $totalPrice.innerHTML = `$${total}`;
   localStorage.setItem('cart', JSON.stringify(currentCart));
   getCart();
 }
+
 // increase ammount of product
 function increase(id) {
   update(id, '+');
 }
+
 // decrease ammount of product
 function decrease(id) {
   update(id, '-');
 }
+
 //update ammount of product
 function update(id, sign) {
   let $count = document.getElementById("count"+id);
@@ -141,6 +149,7 @@ function update(id, sign) {
   $totalPrice.innerHTML = `$${total}`;
   localStorage.setItem('cart', JSON.stringify(currentCart));
 }
+
 // calcalate total price
 function calculateTotalPrice(currentCart) {
   const total = currentCart.reduce((total, item) => item.count * (item.price-item.price * item.discount / 100) + total, 0);
