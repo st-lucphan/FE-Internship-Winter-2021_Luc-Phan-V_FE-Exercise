@@ -25,8 +25,8 @@ function renderProduct(data) {
                   ${item.discount > 0 ? `<span class="badge card-discount">-${item.discount}%</span>` : ''}               
                   <div class="card-content">
                     <h4 class="card-title"><a href="#" class="card-title-link">${item.name}</a></h4>
-                    <span class="card-price ${item.discount > 0 ? 'card-discount-price' : ''}">$${(item.price - (item.price * item.discount / 100)).toFixed(2)}</span>
-                    ${item.discount > 0 ? `<span class="card-original-price">$${item.price}</span>` : ''}
+                    <span class="card-price ${item.discount > 0 ? 'card-discount-price' : ''}">&dollar;${(item.price - (item.price * item.discount / 100)).toFixed(2)}</span>
+                    ${item.discount > 0 ? `<span class="card-original-price">&dollar;${item.price}</span>` : ''}
                   </div>
                   <div class="card-hover-icons">
                     <button class="btn btn-warning" onclick="addToCart(${item.id},'${item.name}','${item.image}','${item.price}','${item.discount}',1)"> Add to cart</button>
@@ -43,14 +43,7 @@ function addToCart(id, name, image, price, discount, count) {
   if (itemId > -1) {
     currentCart[itemId].count = currentCart[itemId].count+1 } 
   else {
-    const product = {
-      id:id,
-      name: name,
-      image:image,
-      price: price,
-      discount: discount,
-      count: count
-    }	
+    const product = new Product(id, name, image, price, discount, count);	
     currentCart.push(product);
   };
   localStorage.setItem('cart', JSON.stringify(currentCart));
@@ -71,7 +64,7 @@ function getCart() {
   const $totalPrice = document.querySelector('.total-cost');
   let currentCart = localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : [];
   if (currentCart.length === 0 ) {
-    const list = `<h3>Không có sản phẩm nào trong giỏ hàng!</h3>`;
+    const list = `<h3 class="text-center">Không có sản phẩm nào trong giỏ hàng!</h3>`;
     $cartList.innerHTML = list;
     return;
   }
@@ -91,9 +84,9 @@ function getCart() {
               <p class="text-bold">XL</h4>
             </div>
             <div class="col col-2 cell ammount">
-              <button class="decrease" onclick="decrease(${item.id})">-</button>
+              <button class="decrease" onclick="update(${item.id}, '-')">-</button>
               <input type="text" class="ammount-input" id="count${item.id}" value="${item.count}">
-              <button class="increase text-bold" onclick="increase(${item.id})">+</button>
+              <button class="increase text-bold" onclick="update(${item.id}, '+')">+</button>
             </div>
             <div class="col col-2 cell">
               <h4 class="price">${(item.price - item.price * item.discount / 100).toFixed(2)}</h4>
@@ -106,7 +99,7 @@ function getCart() {
     });
     $cartList.innerHTML = list.join('');
     const total = calculateTotalPrice(currentCart);
-    $totalPrice.innerHTML = `$${total}`;
+    $totalPrice.innerHTML = `&dollar;${total}`;
   }
 }
 
@@ -119,19 +112,9 @@ function removeCart(id) {
   if (currentCart.length === 0) return;
   currentCart = currentCart.filter(item => item.id !== id);
   let total = calculateTotalPrice(currentCart);
-  $totalPrice.innerHTML = `$${total}`;
+  $totalPrice.innerHTML = `&dollar;${total}`;
   localStorage.setItem('cart', JSON.stringify(currentCart));
   getCart();
-}
-
-// increase ammount of product
-function increase(id) {
-  update(id, '+');
-}
-
-// decrease ammount of product
-function decrease(id) {
-  update(id, '-');
 }
 
 //update ammount of product
@@ -152,7 +135,7 @@ function update(id, sign) {
   console.log( currentCart[itemId].count);
   $count.value = currentCart[itemId].count;
   let total = calculateTotalPrice(currentCart);
-  $totalPrice.innerHTML = `$${total}`;
+  $totalPrice.innerHTML = `&dollar;${total}`;
   localStorage.setItem('cart', JSON.stringify(currentCart));
 }
 
