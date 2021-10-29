@@ -1,0 +1,26 @@
+.btn {
+  border-radius: 56px;
+  padding: 16px 28px;
+  font-weight: 700;
+  &.btn-default {
+    color: map-get($color, gray-A);
+    background-color: map-get($color, 'white');
+    border: 0;
+  }
+  &.btn-transparent {
+    border: 1px solid #c4c4c4;
+    background-color: transparent;
+  }
+  &.btn-warning {
+    background-color: $color-primary;
+    color: map-get($color, gray-A);
+    border: 0;
+  }
+}
+@media (max-width: 375px){
+  .btn {
+    border-radius: 24px;
+    padding: 4px 10px;
+    font-size: 10px;
+  }
+}

@@ -1,0 +1,101 @@
+.section-banner {
+  .banner {
+    .banner-content {
+      width: 30%;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 15%;
+      right: 0;
+      z-index: 1;
+      .banner-title {
+        width: 100%;
+        font-weight: bold;
+        font-size: 72px;
+        line-height: 1;
+        color: map-get($color, 'white');
+      }
+      .banner-action {
+        font-weight: 700;
+        font-size: map-get($font-size, xxl);
+        line-height: 1.5;
+        height: 36px;
+        color: map-get($color, 'white');
+        display: flex;
+        text-decoration: underline;
+        .banner-action-img {
+          width: 36px;
+          height: 36px;
+          margin-right: 32px;
+        }
+      }
+    }
+  }
+  .benefit {
+    width: 80%;
+    padding-top: 36px;
+    padding-bottom: 24px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: map-get($color, 'white');
+    border-radius: 0 70px 0 0;
+    .banner-benefit {
+      padding-left: 15%;
+    }
+  }
+}
+@media (max-width: 375px) {
+  .section-banner {
+    .banner {
+      .banner-img {
+        content: url('../../images/Fashion-home-iphone11.png')
+      }
+      .banner-content {
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        right: 0;
+        padding-left: 24px;
+        z-index: 1;
+        .banner-title {
+          font-size: 48px;
+          line-height: 1;
+          color: map-get($color, 'white');
+        }
+      }
+    }
+    .benefit {
+      display: none;
+    }
+  }
+}
+@media (min-width:576px) and (max-width: 768px){
+  .section-banner {
+    .banner {
+      .banner-content {
+        width: 65%;
+        padding-left: 0;
+        .banner-title {
+          font-size: 24px;
+        }
+        .banner-action {
+          font-weight: 700;
+          font-size: map-get($font-size, normal);
+          line-height: 1;
+          height: 16px;
+          .banner-action-img {
+            width: 16px;
+            height: 16px;
+            margin-right: 16px;
+          }
+        }
+      }
+    }
+    .benefit {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,48 @@
+.card {
+  position: relative;
+  .card-title-link {
+    font-size: map-get($font-size, normal);
+    line-height: 1.5;
+    font-weight: 300;
+    color: map-get($color, gray-A);
+  }
+  .card-price {
+    font-weight: 400;
+    font-size: map-get($font-size, xl);
+    line-height: 1.5;
+    color: map-get($color, gray-A);
+  }
+  .card-discount-price {
+    color: map-get($color, 'red');
+  }
+  .card-original-price {
+    font-weight: 400;
+    font-size: map-get($font-size, xl);
+    line-height: 1.5;
+    color: #cecece;
+    float: right;
+  }
+  .card-discount {
+    position: absolute;
+    top: 24px;
+    left: 20px;
+  }
+}
+@media (max-width: 375px){
+  .card {
+    margin-top: 6px;
+    .card-title-link {
+      font-size: map-get($font-size, xs);
+      line-height: 1.5;
+      font-weight: 300;
+    }
+    .card-price {
+      font-size: 10px;
+      line-height: 1.5;
+    }
+    .card-original-price {
+      font-size: 10px;
+      line-height: 1.5;
+    }
+  }
+}
