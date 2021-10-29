@@ -664,7 +664,7 @@ footer {
       font-size: 14px;
       line-height: 1.5;
       font-weight: normal; } }
-.banner-content {
+.section-banner .banner .banner-content {
   width: 30%;
   position: absolute;
   top: 50%;
@@ -672,13 +672,13 @@ footer {
   left: 15%;
   right: 0;
   z-index: 1; }
-  .banner-content .banner-title {
+  .section-banner .banner .banner-content .banner-title {
     width: 100%;
     font-weight: bold;
     font-size: 72px;
     line-height: 1;
     color: #FFFFFF; }
-  .banner-content .banner-action {
+  .section-banner .banner .banner-content .banner-action {
     font-weight: 700;
     font-size: 24px;
     line-height: 1.5;
@@ -686,12 +686,11 @@ footer {
     color: #FFFFFF;
     display: flex;
     text-decoration: underline; }
-    .banner-content .banner-action .banner-action-img {
+    .section-banner .banner .banner-content .banner-action .banner-action-img {
       width: 36px;
       height: 36px;
       margin-right: 32px; }
-
-.benefit {
+.section-banner .benefit {
   width: 80%;
   padding-top: 36px;
   padding-bottom: 24px;
@@ -700,12 +699,13 @@ footer {
   bottom: 0;
   background-color: #FFFFFF;
   border-radius: 0 70px 0 0; }
-
-.banner-benefit {
-  padding-left: 15%; }
+  .section-banner .benefit .banner-benefit {
+    padding-left: 15%; }
 
 @media (max-width: 375px) {
-  .banner-content {
+  .section-banner .banner .banner-img {
+    content: url("../../images/Fashion-home-iphone11.png"); }
+  .section-banner .banner .banner-content {
     width: 100%;
     position: absolute;
     top: 50%;
@@ -714,33 +714,28 @@ footer {
     right: 0;
     padding-left: 24px;
     z-index: 1; }
-    .banner-content .banner-title {
+    .section-banner .banner .banner-content .banner-title {
       font-size: 48px;
       line-height: 1;
       color: #FFFFFF; }
-
-  .banner .banner-img {
-    content: url("../../images/Fashion-home-iphone11.png"); }
-
-  .benefit {
+  .section-banner .benefit {
     display: none; } }
 @media (min-width: 576px) and (max-width: 768px) {
-  .banner-content {
+  .section-banner .banner .banner-content {
     width: 65%;
     padding-left: 0; }
-    .banner-content .banner-title {
+    .section-banner .banner .banner-content .banner-title {
       font-size: 24px; }
-    .banner-content .banner-action {
+    .section-banner .banner .banner-content .banner-action {
       font-weight: 700;
       font-size: 16px;
       line-height: 1;
       height: 16px; }
-      .banner-content .banner-action .banner-action-img {
+      .section-banner .banner .banner-content .banner-action .banner-action-img {
         width: 16px;
         height: 16px;
         margin-right: 16px; }
-
-  .benefit {
+  .section-banner .benefit {
     display: none; } }
 .benefit-list .benefit-item.benefit-horizontal {
   display: flex;
