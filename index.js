@@ -142,7 +142,13 @@ function update(id, sign) {
 
   if (currentCart.length !== 0) currentCart = JSON.parse(currentCart);
   let itemId = currentCart.findIndex(item => item.id == id);
-  currentCart[itemId].count = (sign === '-') ? currentCart[itemId].count - 1 : currentCart[itemId].count + 1;
+  if (sign === '-') {
+    if (currentCart[itemId].count === 0) return;
+    currentCart[itemId].count = currentCart[itemId].count - 1;
+  }
+  else {
+    currentCart[itemId].count = currentCart[itemId].count + 1;
+  }
   console.log( currentCart[itemId].count);
   $count.value = currentCart[itemId].count;
   let total = calculateTotalPrice(currentCart);
