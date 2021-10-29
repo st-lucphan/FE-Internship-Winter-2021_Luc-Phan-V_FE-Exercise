@@ -1,0 +1,25 @@
+$font-primary: "Poppins", sans-serif;
+$color-primary: #fbb03b;
+$color: (
+  "white": #FFFFFF,
+  "black": #000000,
+  "gray-A": #333333,
+  "gray-B": #808080,
+  "gray-C": #A8A8A8,
+  "gray-D": linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.5) 100%),
+  "gray-E": linear-gradient(90deg, #000000 33.28%, rgba(0, 0, 0, 0) 94.05%),
+  "gray-F": #D8D8D8,
+  "gray-G": #E5E5E5,
+  "gray-H": #C1C1C1,
+  "gray-I": #EEEEEE,
+  "red": #ff0000,
+);
+$font-size: (
+  "xs": 12px,
+  "sm": 14px,
+  "normal": 16px,
+  "lg": 18px,
+  "xl": 20px,
+  "xxl": 24px,
+  "xxxl": 32px,
+);

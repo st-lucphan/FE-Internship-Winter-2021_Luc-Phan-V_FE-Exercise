@@ -1,0 +1,103 @@
+.section {
+  .section-title {
+    font-weight: 300;
+    font-size: map-get($font-size, xxxl);
+    line-height: 1.5;
+    color: map-get($color, gray-A);
+    margin-bottom: 40px;
+  }
+  .section-action {
+    position: absolute;
+    top: 10%;
+    right: 10%;
+  }
+  &.section-banner {
+    position: relative;
+    top: 0;
+    .banner{
+      &::after {
+      width: 100%;
+      height: 100%;
+      background: map-get($color, gray-D);
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      }
+    }
+  }
+  &.section-collection {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+  &.section-product {
+    position: relative;
+    padding-top: 48px;
+    padding-bottom: 60px;
+  }
+  &.section-newsletter {
+    position: relative;
+    padding-bottom: 0;
+  }
+  &.section-newsletter {
+    &::after {
+      width: 100%;
+      height: 100%;
+      background: map-get($color, gray-E);
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0.7;
+    }
+  }
+  &.section-benefit {
+    background-color: #f7f7f7;
+    padding-top: 48px;
+    padding-bottom: 54px;
+  }
+}
+@media (max-width: 375px){
+  .section{
+    &.section-newsletter {
+      .newsletter-img {
+        content: url('../../images/newsletter.png')
+      }
+    }
+    &.section-product {
+      padding-top: 48px;
+      padding-bottom: 52px;
+      .text-center {
+        text-align: left;
+      }
+    }
+    .section-title {
+      font-size: map-get($font-size, lg);
+      margin-bottom: 16px;
+      line-height:  1.5;
+    }
+    .section-action {
+      position: absolute;
+      top: 9%;
+      right: 24px;
+    }
+    &.section-collection {
+      padding-top: 24px;
+      padding-bottom: 0;
+    }
+    &.section-benefit {
+      padding-top: 24px;
+      padding-bottom: 24px;
+    }
+  }
+}
+@media (min-width: 576px) and (max-width: 768px){
+  .section {
+    .section-action {
+      position: absolute;
+      top: 0;
+      transform: translateY(100%);
+      right: 10%;
+    }
+  }
+}
