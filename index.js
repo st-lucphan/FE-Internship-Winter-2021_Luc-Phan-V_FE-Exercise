@@ -42,7 +42,7 @@ function addToCart(id, name, image, price, discount, count) {
   let itemId = currentCart.findIndex(item => item.id == id);
   if (itemId > -1) {
     currentCart[itemId].count = currentCart[itemId].count+1 } 
-  else{
+  else {
     const product = {
       id:id,
       name: name,
@@ -66,7 +66,7 @@ function renderCart() {
 }
 
 //render cart-list
-function getCart(){
+function getCart() {
   const $cartList = document.querySelector('.cart-list');
   const $totalPrice = document.querySelector('.total-cost');
   let currentCart = localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : [];
@@ -79,30 +79,30 @@ function getCart(){
     //currentCart = JSON.parse(currentCart);
     const list = currentCart.map(item => {
     return `
-        <li class="row cart-item">
-          <div class="col col-4 cell justify-content-left" >
-            <img src="${item.image}" alt="T-Shirt Summer Vibes">
-            <p class="cart-item-name">${item.name}</p>
-          </div>
-          <div class="col col-2 cell">
-            <p class="text-bold">White</p>
-          </div>
-          <div class="col col-1 cell">
-            <p class="text-bold">XL</h4>
-          </div>
-          <div class="col col-2 cell ammount">
-            <button class="decrease" onclick="decrease(${item.id})">-</button>
-            <input type="text" class="ammount-input" id="count${item.id}" value="${item.count}">
-            <button class="increase text-bold" onclick="increase(${item.id})">+</button>
-          </div>
-          <div class="col col-2 cell">
-            <h4 class="price">${(item.price - item.price * item.discount / 100).toFixed(2)}</h4>
-          </div>
-          <div class="col col-1 cell">
-            <button class="btn-remove text-bold" onclick="removeCart(${item.id})">X</button>
-          </div>
-        </li>
-      `;
+          <li class="row cart-item">
+            <div class="col col-4 cell justify-content-left" >
+              <img src="${item.image}" alt="T-Shirt Summer Vibes">
+              <p class="cart-item-name">${item.name}</p>
+            </div>
+            <div class="col col-2 cell">
+              <p class="text-bold">White</p>
+            </div>
+            <div class="col col-1 cell">
+              <p class="text-bold">XL</h4>
+            </div>
+            <div class="col col-2 cell ammount">
+              <button class="decrease" onclick="decrease(${item.id})">-</button>
+              <input type="text" class="ammount-input" id="count${item.id}" value="${item.count}">
+              <button class="increase text-bold" onclick="increase(${item.id})">+</button>
+            </div>
+            <div class="col col-2 cell">
+              <h4 class="price">${(item.price - item.price * item.discount / 100).toFixed(2)}</h4>
+            </div>
+            <div class="col col-1 cell">
+              <button class="btn-remove text-bold" onclick="removeCart(${item.id})">X</button>
+            </div>
+          </li>
+          `;
     });
     $cartList.innerHTML = list.join('');
     const total = calculateTotalPrice(currentCart);
